@@ -15,7 +15,7 @@ function LandingPage() {
                 <div className=" flex flex-col justify-start items-start">
                     <div className="h-20 overflow-y-hidden">
                         <div className="flex flex-row justify-center items-center">
-                            <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, delay: 0.3 }} ><Heading text="Creating value through"></Heading></motion.div>
+                            <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, delay: 0.3 }} ><Heading text="We create value through software."></Heading></motion.div>
                             {/* Need to add a rolling text here called Design/ Develop/AI */}
                         </div>
                     </div>
