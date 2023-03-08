@@ -16,7 +16,7 @@ function LandingPage() {
                     <div className="h-auto py-2 overflow-y-hidden">
                         <div className="flex flex-row w-full justify-center items-center">
                             <motion.div initial={{ opacity: 0, y: 200 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2 }} >
-                                <div className="text-4xl md:text-6xl font-bold">
+                                <div className="text-6xl font-bold">
                                         We create value<br/>through software.
                                 </div>
                             </motion.div>
@@ -32,7 +32,7 @@ function LandingPage() {
                     <motion.div
                         initial={{
                             opacity: 0,
-                            y: 100
+                            y: 70
                         }}
                         animate={{
                             opacity: 1,
@@ -46,7 +46,7 @@ function LandingPage() {
                     <motion.div
                         initial={{
                             opacity: 0,
-                            y: 70
+                            y: 50
                         }}
                         animate={{
                             opacity: 1,
@@ -60,7 +60,7 @@ function LandingPage() {
                     <motion.div
                         initial={{
                             opacity: 0,
-                            y: 90
+                            y: 30
                         }}
                         animate={{
                             opacity: 1,
