@@ -1,5 +1,5 @@
 import Heading, { SubHeading } from "../../styles/components/heading";
-import BluePage from "../../styles/layouts/bluePage";
+import BluePage from "../../styles/layouts/bluepage";
 import { motion } from "framer-motion";
 
 
@@ -11,8 +11,8 @@ function LandingPage() {
     return (
         <BluePage>
 
-            <div className="flex flex-col-reverse md:flex-row gap-24 md:gap-96 justify-center items-center w-full -mt-24 md:-mt-16">
-                <div className=" flex flex-col justify-start items-start">
+            <div className="flex flex-col-reverse md:flex-row justify-center items-center w-full -mt-24 md:-mt-16">
+                <div className=" flex flex-col w-full justify-start items-start">
                     <div className="h-auto py-2 overflow-y-hidden">
                         <div className="flex flex-row w-full justify-center items-center">
                             <motion.div initial={{ opacity: 0, y: 200 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2 }} >
@@ -28,7 +28,7 @@ function LandingPage() {
                     </div>
                 </div>
 
-                <div className="hidden xl:flex relative h-[250px] w-[250px] md:h-[400px] md:w-[400px] justify-start items-end">
+                <div className="hidden xl:flex relative h-[250px] w-[250px] md:h-[400px] md:w-[400px] justify-start items-end mr-20">
                     <motion.div
                         initial={{
                             opacity: 0,
