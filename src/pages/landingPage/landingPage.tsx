@@ -1,6 +1,7 @@
 import Heading, { SubHeading } from "../../styles/components/heading";
 import BluePage from "../../styles/layouts/bluepage";
 import { motion } from "framer-motion";
+import RollingText from "./components/rollingtext";
 
 
 
@@ -13,11 +14,12 @@ function LandingPage() {
 
             <div className="flex flex-col-reverse md:flex-row justify-center items-center w-full -mt-24 md:-mt-16">
                 <div className=" flex flex-col w-full justify-start items-start">
-                    <div className="h-auto py-2 overflow-y-hidden">
-                        <div className="flex flex-row w-full justify-center items-center">
-                            <motion.div initial={{ opacity: 0, y: 200 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2 }} >
-                                <div className="text-6xl font-bold">
-                                        We create value<br/>through software.
+                    <div className="overflow-y-hidden">
+                        <div className="relative flex py-2 flex-row w-full justify-center items-center overflow-hidden">
+                            <motion.div initial={{ opacity: 0, y: 300 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2 }} >
+                                <div className="relative w-full text-5xl md:text-6xl font-bold flex flex-wrap gap-2">
+                                        <div>We create value </div>
+                                        <div className="relative w-full flex flex-col md:flex-row gap-2 justify-start items-start"> through <RollingText/></div>
                                 </div>
                             </motion.div>
                             {/* Need to add a rolling text here called Design/ Develop/AI */}
