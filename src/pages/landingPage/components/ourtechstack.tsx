@@ -16,16 +16,10 @@ function OurTechStack() {
                     <div className="flex justify-start items-start flex-col gap-5">
                         <div className="text-4xl md:text-5xl font-bold text-tan/90">With more than half a decade of experience, We have perfected our technology stack</div>
                         <div className="text-md font-regular text-tan/90">
-                            At our core, we are committed to delivering high-quality software solutions that meet the needs of our clients. That's why we use the most efficient technologies for web development, including React.js and Tailwind CSS.
-                            React.js is a powerful JavaScript library that allows us to build dynamic user interfaces with ease. It enables us to create reusable components that can be used across multiple projects, saving time and resources.
-                            With React.js, we can build fast, responsive, and scalable web applications that meet the needs of our clients. <br /><br />
-
-                            Tailwind CSS is a utility-first CSS framework that allows us to create custom designs quickly and efficiently. It provides a set of pre-defined classes that can be used to style HTML elements, making it easy to create visually appealing user interfaces. With Tailwind CSS, we can deliver custom designs that are both functional and aesthetically pleasing.<br /><br />
-
-                            We understand that choosing the right technologies for a project can be a daunting task, which is why we work closely with our clients to understand their needs and requirements. Our team of experts has years of experience in web development and can recommend the best technologies for each project, ensuring that we deliver software solutions that meet our clients' needs and exceed their expectations.<br /><br />
+                        Our company is committed to delivering high-quality software solutions using efficient technologies such as React.js and Tailwind CSS. React.js is a powerful JavaScript library that allows for building dynamic and reusable user interfaces, while Tailwind CSS is a utility-first CSS framework that helps create custom designs quickly. The company's team of experts works closely with clients to understand their needs and recommend the best technologies for each project, ensuring they deliver software solutions that meet and exceed their clients' expectations.
                         </div>
 
-                        <div style={{ backgroundImage: `url('${techstack}')` }} className="h-12 w-48 bg-no-repeat bg-left bg-contain -mt-3">
+                        <div style={{ backgroundImage: `url('${techstack}')` }} className="h-12 w-48 bg-no-repeat bg-left bg-contain mt-3">
                         </div>
 
                     </div>

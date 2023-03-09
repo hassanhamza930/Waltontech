@@ -39,13 +39,9 @@ function LandingPage() {
                                     <div className="h-full w-2 bg-tan/90 "></div>
                                 </div>
                                 <div className="flex flex-col justify-start items-start gap-4">
-                                    <div className="text-3xl md:text-4xl font-bold text-tan/90 -mt-1">Design</div>
+                                    <div className="text-3xl md:text-4xl font-bold text-tan/90 -mt-[3px]">Design</div>
                                     <div className="text-md font-regular text-tan/90">
-                                        At our company, we believe that communication is the foundation of a successful project.<br /><br />
-
-                                        During our initial consultation, we take the time to listen to you and ask questions that help us get a complete picture of your project requirements. We discuss your vision, your target audience, your budget, and your timeline, among other things. This helps us create a customized development plan that is tailored to your specific needs.<br /><br />
-
-                                        We also use this opportunity to provide you with our professional expertise and insights. Our team of developers and designers has extensive experience in creating custom software solutions for businesses of all sizes. We can provide you with advice and recommendations on the best technologies and approaches to use for your project, based on our past experiences and industry best practices.<br /><br />
+                                    At the company, communication is considered essential for successful projects. During the initial consultation, the team listens to clients, asks questions, and gathers all necessary details about the project requirements. This information is then used to create a customized development plan that meets clients' specific needs. The team also offers professional expertise and insights, including advice and recommendations on the best technologies and approaches based on their experience and industry best practices.
                                     </div>
                                 </div>
                             </div>

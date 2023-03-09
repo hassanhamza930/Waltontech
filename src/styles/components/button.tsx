@@ -7,7 +7,7 @@ interface ButtonInputs{
 
 function Button(props:ButtonInputs) {
     return (  
-        <button onClick={()=>{props.onClick()}} className={`${props.customStyles} px-6 rounded-sm py-[5px] hover:text-tan hover:bg-black/90 text-blue bg-white font-medium`}>
+        <button onClick={()=>{props.onClick()}} className={`${props.customStyles} px-6 rounded-sm py-[5px] hover:text-black hover:bg-[#F7C04A] hover:shadow-2xl text-blue bg-white font-medium`}>
             {props.text}
         </button>
     );
