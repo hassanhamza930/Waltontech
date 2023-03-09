@@ -13,7 +13,7 @@ function Heading(props:TextInputs) {
 
 export function SubHeading(props:TextInputs) {
     return (  
-        <div className={`${props.customStyles} text-tan/90 text-xl font-regular`}>
+        <div className={`${props.customStyles} text-tan/90 text-md font-regular`}>
             {props.text}
         </div>
     );
