@@ -34,7 +34,11 @@ function App() {
             exit={{opacity:0}}
             transition={{duration:0.8}}
             className="fixed z-50 h-screen w-full text-tan bg-black/90 flex flex-col justify-start items-end pt-20 px-5 gap-4">
-                <button className="link-underline">What we do</button>
+                <button onClick={()=>{
+                  setsideBarOpen(false);
+                   var el = document.getElementById("whatwedo");
+                   el?.scrollIntoView({ behavior: "smooth" });
+                }} className="link-underline">What we do</button>
                 <button className="link-underline">Stories</button>
                 <button className="link-underline">Pricing</button>
                 <button className="link-underline">Contact us</button>

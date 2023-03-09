@@ -17,8 +17,8 @@ function LandingPage() {
         <div className="flex flex-col justify-center items-center">
             <HeroSection />
 
-            <div className="flex flex-col h-full justify-center items-center w-full bg-blue py-20">
-                <div id="whatwedo" className="w-[50%] bg-tan/90 backdrop-blur-md rounded-sm flex flex-col justify-start items-start p-10 gap-4">
+            <div id="whatwedo" className="flex flex-col h-full justify-center items-center w-full bg-blue py-0 md:py-20">
+                <div className="w-full xl:w-[50%] bg-tan/90 backdrop-blur-md rounded-sm flex flex-col justify-start items-start p-6 md:p-10 gap-4">
 
                     <div className="flex flex-row justify-center items-center gap-4">
                         <div className="w-12 h-[3px] rounded-full bg-blue/90"></div>
@@ -26,7 +26,7 @@ function LandingPage() {
                     </div>
 
                     <div className="flex justify-start items-start flex-col gap-5">
-                        <div className="text-6xl font-bold text-black/90">We build experiences <br />for the web.</div>
+                        <div className="text-4xl md:text-6xl font-bold text-black/90">We build experiences <br />for the web.</div>
                         <div className="text-md font-regular text-black/90">
                             We offer a wide range of services, including web development and custom software development. Whether you need a simple website or a complex software application, we have the skills and expertise to deliver high-quality solutions that meet your specific needs.<br /><br />
 
@@ -36,11 +36,11 @@ function LandingPage() {
                         </div>
                     </div>
 
-                    <div className="flex flex-row justify-center items-center -mt-12">
-                        <div style={{ backgroundImage: `url('${laptop}')` }} className="h-96 w-96 bg-contain bg-center bg-no-repeat">
+                    <div className="flex flex-row justify-center items-center -mt-6 md:-mt-12">
+                        <div style={{ backgroundImage: `url('${laptop}')` }} className="w-36 h-36 md:h-72 md:w-72 bg-contain bg-center bg-no-repeat">
                         </div>
 
-                        <div style={{ backgroundImage: `url('${mobile}')` }} className="h-52 w-52 bg-contain bg-center bg-no-repeat">
+                        <div style={{ backgroundImage: `url('${mobile}')` }} className="w-20 h-20 md:h-40 md:w-40 bg-contain bg-center bg-no-repeat">
                         </div>
                     </div>
 

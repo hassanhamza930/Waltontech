@@ -17,7 +17,10 @@ function Header(props:HeaderProps) {
             <img className="w-24 md:w-36 -mb-1" src={logo}></img>
 
             <div className="hidden md:flex font-light flex-row justify-center items-center gap-12">
-                <button className="link-underline">What we do</button>
+                <button onClick={()=>{
+                    var el=document.getElementById("whatwedo");
+                    el?.scrollIntoView({behavior:"smooth"})
+                }} className="link-underline">What we do</button>
                 <button className="link-underline">Stories</button>
                 <button className="link-underline">Pricing</button>
                 <button className="link-underline">Contact us</button>
