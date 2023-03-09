@@ -26,7 +26,7 @@ function LandingPage() {
                     </div>
 
                     <div className="flex justify-start items-start flex-col gap-5">
-                        <div className="text-4xl md:text-6xl font-bold text-black/90">We build experiences <br />for the web.</div>
+                        <div className="text-5xl md:text-6xl font-bold text-black/90">We build experiences <br />for the web.</div>
                         <div className="text-md font-regular text-black/90">
                             We offer a wide range of services, including web development and custom software development. Whether you need a simple website or a complex software application, we have the skills and expertise to deliver high-quality solutions that meet your specific needs.<br /><br />
 
