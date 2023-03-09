@@ -27,7 +27,7 @@ function RollingText() {
 
 
     return (
-        <div className="relative text-5xl md:text-6xl font-bold text-tan h-16 ">
+        <div className="relative text-4xl md:text-5xl font-bold text-tan h-16 ">
             {
                 words.map((word, index) => {
                     return (

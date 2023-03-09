@@ -6,9 +6,8 @@ import argoggles from "../../images/argoggles.svg";
 import argoggles2 from "../../images/argoggles2.svg";
 import dotgrid from "../../images/dotgrid.gif";
 import HeroSection from "./components/herosection";
-import laptop from "../../images/laptop.svg";
-import mobile from "../../images/mobile.svg";
-import whatwedobg from "../../images/whatwedobg.svg";
+import WhatWeDo from "./components/whatwedo";
+import WhoWeAre from "./components/whoweare";
 
 
 function LandingPage() {
@@ -17,34 +16,31 @@ function LandingPage() {
     return (
         <div className="flex flex-col justify-center items-center">
             <HeroSection />
+            <WhatWeDo />
+            <WhoWeAre />
 
-            <div style={{backgroundImage:(`url('${whatwedobg}')`)}} id="whatwedo" className="flex flex-col h-full justify-center items-center w-full">
-                <div className="flex flex-col h-full justify-center items-center w-full py-0 md:py-20">
-                    <div className="w-full xl:w-[50%] bg-tan/90 backdrop-blur-md rounded-sm flex flex-col justify-start items-start p-6 md:p-10 gap-4">
+            <div id="whoweare" className=" bg-blue/90  flex flex-col h-full justify-center items-center w-full">
+                <div className="bg-blue bg-contain bg-blend-lighten bg-right-top flex bg-no-repeat flex-col h-full justify-center items-center w-full py-0 md:py-10">
+                    <div className="w-full xl:w-[50%] bg-blue/70 md:bg-transparent rounded-sm flex flex-col justify-start items-start p-6 md:p-10 gap-4">
 
                         <div className="flex flex-row justify-center items-center gap-4">
-                            <div className="w-12 h-[3px] rounded-full bg-blue/90"></div>
-                            <div className="text-sm font-regular text-blue/90">What we do</div>
+                            <div className="w-12 h-[3px] rounded-full bg-tan/90"></div>
+                            <div className="text-sm font-regular text-tan/90">Our Technology Stack</div>
                         </div>
 
                         <div className="flex justify-start items-start flex-col gap-5">
-                            <div className="text-5xl md:text-6xl font-bold text-black/90">We build experiences <br />for the web.</div>
-                            <div className="text-md font-regular text-black/90">
-                                We offer a wide range of services, including web development and custom software development. Whether you need a simple website or a complex software application, we have the skills and expertise to deliver high-quality solutions that meet your specific needs.<br /><br />
+                            <div className="text-4xl md:text-5xl font-bold text-tan/90">With more than half a decade of experience, We have perfected our technology stack</div>
+                            <div className="text-md font-regular text-tan/90">
+                                At our core, we are committed to delivering high-quality software solutions that meet the needs of our clients. That's why we use the most efficient technologies for web development, including React.js and Tailwind CSS.
+                                React.js is a powerful JavaScript library that allows us to build dynamic user interfaces with ease. It enables us to create reusable components that can be used across multiple projects, saving time and resources.
+                                With React.js, we can build fast, responsive, and scalable web applications that meet the needs of our clients. <br/><br/>
 
-                                At our company, we take a collaborative approach to development. We work closely with you to understand your goals, identify your pain points, and create a solution that addresses your unique challenges. We pride ourselves on our ability to deliver projects on time and on budget, without compromising on quality.<br /><br />
+                                Tailwind CSS is a utility-first CSS framework that allows us to create custom designs quickly and efficiently. It provides a set of pre-defined classes that can be used to style HTML elements, making it easy to create visually appealing user interfaces. With Tailwind CSS, we can deliver custom designs that are both functional and aesthetically pleasing.<br/><br/>
 
-                                We understand the importance of staying up-to-date with the latest trends and technologies in web and mobile development. That's why we invest heavily in training and professional development for our team members. This ensures that we can provide you with the most innovative and cutting-edge solutions that will give you a competitive edge in your industry.<br /><br />
+                                We understand that choosing the right technologies for a project can be a daunting task, which is why we work closely with our clients to understand their needs and requirements. Our team of experts has years of experience in web development and can recommend the best technologies for each project, ensuring that we deliver software solutions that meet our clients' needs and exceed their expectations.<br/><br/>
                             </div>
                         </div>
 
-                        <div className="flex flex-row justify-center items-center -mt-6 md:-mt-12">
-                            <div style={{ backgroundImage: `url('${laptop}')` }} className="w-52 h-52 md:h-72 md:w-72 bg-contain bg-center bg-no-repeat">
-                            </div>
-
-                            <div style={{ backgroundImage: `url('${mobile}')` }} className="w-28 h-28 md:h-40 md:w-40 bg-contain bg-center bg-no-repeat">
-                            </div>
-                        </div>
 
                     </div>
                 </div>

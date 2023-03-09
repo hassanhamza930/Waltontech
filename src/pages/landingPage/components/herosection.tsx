@@ -21,7 +21,7 @@ function HeroSection() {
                     <div className="overflow-y-hidden">
                         <div className="relative flex py-2 flex-row w-full justify-center items-center overflow-hidden">
                             <motion.div initial={{ opacity: 0, y: 300 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2 }} >
-                                <div className="relative w-full text-5xl md:text-6xl font-bold flex flex-wrap gap-2">
+                                <div className="relative w-full text-4xl md:text-5xl font-bold flex flex-wrap gap-2">
                                     <div>We create value </div>
                                     <div className="relative w-full flex flex-col md:flex-row gap-3 justify-start items-start"> through <RollingText /></div>
                                 </div>
