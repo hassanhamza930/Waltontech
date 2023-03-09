@@ -39,10 +39,10 @@ function LandingPage() {
                         </div>
 
                         <div className="flex flex-row justify-center items-center -mt-6 md:-mt-12">
-                            <div style={{ backgroundImage: `url('${laptop}')` }} className="w-36 h-36 md:h-72 md:w-72 bg-contain bg-center bg-no-repeat">
+                            <div style={{ backgroundImage: `url('${laptop}')` }} className="w-52 h-52 md:h-72 md:w-72 bg-contain bg-center bg-no-repeat">
                             </div>
 
-                            <div style={{ backgroundImage: `url('${mobile}')` }} className="w-20 h-20 md:h-40 md:w-40 bg-contain bg-center bg-no-repeat">
+                            <div style={{ backgroundImage: `url('${mobile}')` }} className="w-28 h-28 md:h-40 md:w-40 bg-contain bg-center bg-no-repeat">
                             </div>
                         </div>
 
