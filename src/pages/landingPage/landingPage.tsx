@@ -11,13 +11,24 @@ import WhoWeAre from "./components/whoweare";
 import OurTechStack from "./components/ourtechstack";
 import OurWorkflow from "./components/ourworkflow";
 import Contact from "./components/contact";
+import { useScroll } from "framer-motion"
+import { useMotionValueEvent } from "framer-motion";
+import { useState } from "react";
+
 
 function LandingPage() {
 
+    const { scrollY } = useScroll({smooth:true})
+    const [y, setY] = useState(0);
+
+    useMotionValueEvent(scrollY, "change", (latest:any) => {
+    //   console.log("Page scroll: ", latest)
+      setY(latest);
+    })
 
     return (
         <div className="flex flex-col justify-center items-center">
-            <HeroSection />
+            <HeroSection y={y}  />
             <WhatWeDo />
             <WhoWeAre />
             {/* <OurTechStack /> */}

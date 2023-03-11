@@ -4,8 +4,8 @@ import whatwedobg from "../../../images/whatwedobg.svg";
 
 function WhatWeDo() {
     return ( 
-        <div style={{backgroundImage:(`url('${whatwedobg}')`)}} id="whatwedo" className="bg-cover bg-center flex flex-col h-full justify-center items-center w-full">
-                <div className="flex bg-blue/50 flex-col h-full justify-center items-center w-full py-0 md:py-20">
+        <div style={{backgroundImage:(`url('${whatwedobg}')`)}} id="whatwedo" className="relative z-20 bg-cover bg-center flex flex-col h-full justify-center items-center w-full">
+                <div className="flex  bg-blue/50 flex-col h-full justify-center items-center w-full py-0 md:py-20">
                     <div className="w-full xl:w-[50%] bg-tan/90 backdrop-blur-md rounded-sm flex flex-col justify-start items-start p-6 md:p-10 gap-4">
 
                         <div className="flex flex-row justify-center items-center gap-4">

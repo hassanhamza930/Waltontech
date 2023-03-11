@@ -6,9 +6,17 @@ import dotgrid from "../../../images/dotgrid.gif";
 import RollingText from "./rollingtext";
 import BluePage from "../../../styles/layouts/bluepage";
 import Button from "../../../styles/components/button";
+import { useSpring } from "framer-motion";
+import { useEffect } from "react";
 
 
-function HeroSection() {
+interface ScrollInformation{
+    y:number
+}
+
+function HeroSection(props:ScrollInformation) {
+
+
     return (
         <BluePage>
             <div
@@ -17,7 +25,7 @@ function HeroSection() {
 
             <div className="relative z-30 flex w-full flex-col-reverse md:flex-row justify-center gap-24 items-center -mt-24 md:-mt-16">
 
-                <div className=" flex flex-col justify-start items-start">
+                <motion.div transition={{ease:"easeInOut",duration:0.1}} className=" flex flex-col justify-start items-start">
                     <div className="overflow-y-hidden">
                         <div className="relative flex py-2 flex-row w-full justify-center items-center overflow-hidden">
                             <motion.div initial={{ opacity: 0, y: 300 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2 }} >
@@ -37,7 +45,7 @@ function HeroSection() {
                             el?.scrollIntoView({ behavior: "smooth" });
                         }}></Button>
                     </motion.div>
-                </div>
+                </motion.div>
 
                 <div className="hidden xl:flex relative h-[250px] w-[250px] md:h-[450px] md:w-[450px] justify-start items-end ">
                     <motion.div
@@ -46,8 +54,10 @@ function HeroSection() {
                             y: 100
                         }}
                         animate={{
-                            opacity: 1,
-                            y: 0
+                            opacity:1,
+                            x:(props.y*0.2),
+                            y: 0,
+                            // duration:4
                         }}
                         transition={{
                             duration: 0.8,
@@ -61,6 +71,7 @@ function HeroSection() {
                         }}
                         animate={{
                             opacity: 1,
+                            x:(props.y*0.15),
                             y: 0
                         }}
                         transition={{
@@ -75,6 +86,7 @@ function HeroSection() {
                         }}
                         animate={{
                             opacity: 1,
+                            x:(props.y*0.1),
                             y: 0
                         }}
                         transition={{

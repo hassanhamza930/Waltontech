@@ -4,7 +4,7 @@ import WhoWeAreBg from "../../../images/whowearebg.svg";
 function WhoWeAre() {
     return (
 
-        <div id="whoweare" className=" bg-blue/90  flex flex-col h-full justify-center items-center w-full">
+        <div id="whoweare" className=" bg-blue/90 relative z-20 flex flex-col h-full justify-center items-center w-full">
             <div style={{ backgroundImage: (`url('${WhoWeAreBg}')`), backgroundSize: "300px" }} className="bg-blue bg-contain bg-blend-lighten bg-right-top flex bg-no-repeat flex-col h-full justify-center items-center w-full py-0 md:py-10">
                 <div className="w-full xl:w-[50%] bg-blue/70 md:bg-transparent rounded-sm flex flex-col justify-start items-start p-6 md:p-10 gap-4">
 
