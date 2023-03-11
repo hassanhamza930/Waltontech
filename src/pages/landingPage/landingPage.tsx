@@ -10,6 +10,7 @@ import WhatWeDo from "./components/whatwedo";
 import WhoWeAre from "./components/whoweare";
 import OurTechStack from "./components/ourtechstack";
 import OurWorkflow from "./components/ourworkflow";
+import Contact from "./components/contact";
 
 function LandingPage() {
 
@@ -21,6 +22,7 @@ function LandingPage() {
             <WhoWeAre />
             {/* <OurTechStack /> */}
             <OurWorkflow/>
+            <Contact/>
         </div>
     );
 }

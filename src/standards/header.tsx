@@ -23,7 +23,10 @@ function Header(props:HeaderProps) {
                 }} className="link-underline">What we do</button>
                 <button className="link-underline">Stories</button>
                 <button className="link-underline">Pricing</button>
-                <button className="link-underline">Contact us</button>
+                <button onClick={()=>{
+                    var el=document.getElementById("contact");
+                    el?.scrollIntoView({behavior:"smooth"})
+                }} className="link-underline">Contact us</button>
             </div>
 
             <div className="md:hidden flex relative">

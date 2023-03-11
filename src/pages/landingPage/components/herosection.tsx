@@ -32,8 +32,8 @@ function HeroSection() {
                         <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, delay: 0.6 }} ><SubHeading text="A Software Development Agency"></SubHeading></motion.div>
                     </div>
                     <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1,delay:2}}>
-                        <Button customStyles="mt-10" text="Explore" onClick={() => {
-                            var el = document.getElementById("whatwedo");
+                        <Button customStyles="mt-10" text="Talk to us" onClick={() => {
+                            var el = document.getElementById("contact");
                             el?.scrollIntoView({ behavior: "smooth" });
                         }}></Button>
                     </motion.div>

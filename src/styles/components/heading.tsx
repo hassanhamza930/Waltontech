@@ -5,7 +5,7 @@ interface TextInputs{
 
 function Heading(props:TextInputs) {
     return (  
-        <div className={`${props.customStyles} text-2xl md:text-6xl font-bold`}>
+        <div style={{fontFamily:"IBM Plex Sans"}} className={`${props.customStyles} text-2xl md:text-6xl font-bold`}>
             {props.text}
         </div>
     );
@@ -13,7 +13,7 @@ function Heading(props:TextInputs) {
 
 export function SubHeading(props:TextInputs) {
     return (  
-        <div className={`${props.customStyles} text-tan/90 text-md font-regular`}>
+        <div style={{fontFamily:"IBM Plex Sans"}} className={`${props.customStyles} text-tan/90 text-md font-regular`}>
             {props.text}
         </div>
     );

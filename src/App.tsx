@@ -5,7 +5,7 @@ import Header from './standards/header';
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AnimatePresence } from 'framer-motion';
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 function App() {
 
@@ -18,30 +18,34 @@ function App() {
         <AnimatePresence>
           {
             sideBarOpen == true &&
-            <motion.div 
-            initial={{scale:0,x:100,y:-100}}
-            animate={{scale:3.5,x:0,y:0}}
-            exit={{scale:0}}
-            transition={{duration:0.5}}
-            className="fixed z-50 h-[500px] w-[500px] rounded-full text-tan bg-black/90">
+            <motion.div
+              initial={{ scale: 0, x: 100, y: -100 }}
+              animate={{ scale: 3.5, x: 0, y: 0 }}
+              exit={{ scale: 0 }}
+              transition={{ duration: 0.5 }}
+              className="fixed z-50 h-[500px] w-[500px] rounded-full text-tan bg-black/90">
             </motion.div>
           }
           {
             sideBarOpen == true &&
-            <motion.div 
-            initial={{opacity:0}}
-            animate={{opacity:1}}
-            exit={{opacity:0}}
-            transition={{duration:0.8}}
-            className="fixed z-50 h-screen w-full text-tan bg-black/90 flex flex-col justify-start items-end pt-20 px-5 gap-4">
-                <button onClick={()=>{
-                  setsideBarOpen(false);
-                   var el = document.getElementById("whatwedo");
-                   el?.scrollIntoView({ behavior: "smooth" });
-                }} className="link-underline">What we do</button>
-                <button className="link-underline">Stories</button>
-                <button className="link-underline">Pricing</button>
-                <button className="link-underline">Contact us</button>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.8 }}
+              className="fixed z-50 h-screen w-full text-tan bg-black/90 flex flex-col justify-start items-end pt-20 px-5 gap-4">
+              <button onClick={() => {
+                setsideBarOpen(false);
+                var el = document.getElementById("whatwedo");
+                el?.scrollIntoView({ behavior: "smooth" });
+              }} className="link-underline">What we do</button>
+              <button className="link-underline">Stories</button>
+              <button className="link-underline">Pricing</button>
+              <button onClick={() => {
+                setsideBarOpen(false);
+                var el = document.getElementById("contact");
+                el?.scrollIntoView({ behavior: "smooth" })
+              }} className="link-underline">Contact us</button>
             </motion.div>
           }
         </AnimatePresence>
