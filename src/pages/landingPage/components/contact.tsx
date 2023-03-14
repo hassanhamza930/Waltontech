@@ -39,7 +39,7 @@ function Contact() {
                                 <div className="mt-4">
                                     My name is Hamza and I'm excited to hear from you.
 
-                                    As a partner at Walton.co, I have a passion for technology and a dedication to delivering high-quality solutions that meet your needs.<br /><br />
+                                    As a partner at Walton.co,<br/> I have a passion for technology and a dedication to delivering high-quality solutions that meet your needs.<br /><br />
 
                                     When you contact me, you'll be met by a real person who is ready to listen to your ideas, answer your questions, and provide expert guidance.<br /><br />
 

@@ -5,15 +5,19 @@ import wavecardbg from "../../images/wavecardbg.svg";
 import colonstechcardbg from "../../images/colonstechcardbg.svg";
 import stardomcardbg from "../../images/stardomcardbg.svg";
 import teldacardbg from "../../images/teldacardbg.svg";
+import { useNavigate } from "react-router-dom";
 
 
 function Stories() {
+
+    const navigate=useNavigate();
+
     return (
         <div style={{ fontFamily: "IBM Plex Sans" }} className="tracking-normal bg-blue h-full w-full flex flex-col justify-center items-center bg-right-top bg-contain bg-no-repeat">
 
             <div style={{ backgroundImage: `url('${storiesbg}')`, fontFamily: "IBM Plex Sans" }} className="tracking-wide bg-black h-full w-full flex flex-col justify-center items-center bg-right-top bg-contain bg-no-repeat">
 
-                <div className="p-10 bg-gradient-to-br from-blue to-black/90 backdrop-blur-sm h-screen w-full flex justify-center items-center">
+                <div className="p-10 bg-gradient-to-br from-blue to-black/90 backdrop-blur-sm h-[500px] w-full flex justify-center items-center">
 
                     <div className="w-full md:w-[70%] flex justify-start items-start flex-col gap-4">
 
@@ -47,38 +51,38 @@ function Stories() {
 
                     <div className="flex flex-wrap w-full gap-4 mt-10 tracking-tight">
 
-                        <button style={{ backgroundImage: `url('${cncardbg}')` }} className="hover:scale-[1.02] hover:shadow-2xl h-96 w-96 bg-contain bg-center bg-no-repeat bg-black rounded-md flex flex-col justify-center items-start">
+                        <button onClick={()=>{window.open("https://careernetwork.co")}} style={{ backgroundImage: `url('${cncardbg}')` }} className="hover:scale-[1.02] hover:shadow-2xl h-72 w-full md:h-96 md:w-96 bg-cover bg-center bg-no-repeat bg-black rounded-md flex flex-col justify-center items-start">
                             <div className="bg-blue/[80%] backdrop-blur-sm h-full w-full flex flex-col justify-center items-center p-5">
-                                <div className="text-tan w-full rounded-sm font-semibold tracking-normal text-4xl flex item-center justify-center">CareerNetwork.co</div>
-                                <div className="text-tan w-full rounded-sm font-light tracking-normal text-md flex item-center justify-center">A Career Focused Social Media App</div>
+                                <div className="text-tan w-full rounded-sm font-semibold tracking-normal text-2xl md:text-4xl flex item-center justify-center">CareerNetwork.co</div>
+                                <div className="text-tan w-full rounded-sm font-light tracking-normal text-sm md:text-md flex item-center justify-center">A Career Focused Social Media App</div>
                             </div>
                         </button>
 
-                        <button style={{ backgroundImage: `url('${wavecardbg}')` }} className="hover:scale-[1.02] hover:shadow-2xl h-96 w-96 bg-contain bg-center bg-no-repeat bg-black/90 rounded-md flex flex-col justify-center items-start">
+                        <button onClick={()=>{window.open("https://wavehr.vercel.app")}} style={{ backgroundImage: `url('${wavecardbg}')` }} className="hover:scale-[1.02] hover:shadow-2xl h-72 w-full md:h-96 md:w-96 bg-cover bg-center bg-no-repeat bg-black/90 rounded-md flex flex-col justify-center items-start">
                             <div className="bg-blue/[80%] backdrop-blur-sm h-full w-full flex flex-col justify-center items-center p-5">
-                                <div className="text-tan w-full rounded-sm font-semibold tracking-normal text-4xl flex item-center justify-center">WaveHR</div>
-                                <div className="text-tan w-full rounded-sm font-light tracking-normal text-md flex item-center justify-center">Interal HR Tool</div>
+                                <div className="text-tan w-full rounded-sm font-semibold tracking-normal text-2xl md:text-4xl flex item-center justify-center">WaveHR</div>
+                                <div className="text-tan w-full rounded-sm font-light tracking-normal text-sm md:text-md flex item-center justify-center">Interal HR Tool</div>
                             </div>
                         </button>
 
-                        <button style={{ backgroundImage: `url('${colonstechcardbg}')` }} className="hover:scale-[1.02] hover:shadow-2xl h-96 w-96 bg-contain bg-center bg-no-repeat bg-black/90 rounded-md flex flex-col justify-center items-start">
+                        <button onClick={()=>{window.open("https://colonstech.com/")}}   style={{ backgroundImage: `url('${colonstechcardbg}')` }} className="hover:scale-[1.02] hover:shadow-2xl h-72 w-full md:h-96 md:w-96 bg-cover bg-center bg-no-repeat bg-black/90 rounded-md flex flex-col justify-center items-start">
                             <div className="bg-blue/[80%] backdrop-blur-sm h-full w-full flex flex-col justify-center items-center p-5">
-                                <div className="text-tan w-full rounded-sm font-semibold tracking-normal text-4xl flex item-center justify-center">:dev</div>
-                                <div className="text-tan w-full rounded-sm font-light tracking-normal text-md flex item-center justify-center">A professional landing page for a software services agency</div>
+                                <div className="text-tan w-full rounded-sm font-semibold tracking-normal text-2xl md:text-4xl flex item-center justify-center">:dev</div>
+                                <div className="text-tan w-full rounded-sm font-light tracking-normal text-sm md:text-md flex item-center justify-center">A professional landing page for a software services agency</div>
                             </div>
                         </button>
 
-                        <button style={{ backgroundImage: `url('${stardomcardbg}')` }} className="hover:scale-[1.02] hover:shadow-2xl h-96 w-96 bg-contain bg-center bg-no-repeat bg-black/90 rounded-md flex flex-col justify-center items-start">
+                        <button onClick={()=>{window.open("https://stardomlanding.vercel.app/annuralkhalid")}} style={{ backgroundImage: `url('${stardomcardbg}')` }} className="hover:scale-[1.02] hover:shadow-2xl h-72 w-full md:h-96 md:w-96 bg-cover  bg-center bg-no-repeat bg-black/90 rounded-md flex flex-col justify-center items-start">
                             <div className="bg-blue/[80%] backdrop-blur-sm h-full w-full flex flex-col justify-center items-center p-5">
-                                <div className="text-tan w-full rounded-sm font-semibold tracking-normal text-4xl flex item-center justify-center">Stardom</div>
-                                <div className="text-tan w-full rounded-sm font-light tracking-normal text-md flex item-center justify-center">A market research landing page for analytics and customer profiling</div>
+                                <div className="text-tan w-full rounded-sm font-semibold tracking-normal text-2xl md:text-4xl flex item-center justify-center">Stardom</div>
+                                <div className="text-tan w-full rounded-sm font-light tracking-normal text-sm md:text-md flex item-center justify-center">A market research landing page for analytics and customer profiling</div>
                             </div>
                         </button>
 
-                        <button style={{ backgroundImage: `url('${teldacardbg}')` }} className="hover:scale-[1.02] hover:shadow-2xl h-96 w-96 bg-contain bg-center bg-no-repeat bg-black/90 rounded-md flex flex-col justify-center items-start">
+                        <button onClick={()=>{window.open("https://telda.vercel.app")}} style={{ backgroundImage: `url('${teldacardbg}')` }} className="hover:scale-[1.02] hover:shadow-2xl h-72 w-full md:h-96 md:w-96 bg-cover bg-center bg-no-repeat bg-black/90 rounded-md flex flex-col justify-center items-start">
                             <div className="bg-blue/[80%] backdrop-blur-sm h-full w-full flex flex-col justify-center items-center p-5">
-                                <div className="text-tan w-full rounded-sm font-semibold tracking-normal text-4xl flex item-center justify-center">Telda</div>
-                                <div className="text-tan w-full rounded-sm font-light tracking-normal text-md flex item-center justify-center">Landing page for a financial services company.</div>
+                                <div className="text-tan w-full rounded-sm font-semibold tracking-normal text-2xl md:text-4xl flex item-center justify-center">Telda</div>
+                                <div className="text-tan w-full rounded-sm font-light tracking-normal text-sm md:text-md flex item-center justify-center">Landing page for a financial services company.</div>
                             </div>
                         </button>
 
