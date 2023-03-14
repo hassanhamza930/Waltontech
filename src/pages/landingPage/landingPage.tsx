@@ -27,7 +27,7 @@ function LandingPage() {
     })
 
     return (
-        <div className="flex flex-col justify-center items-center">
+        <div className="tracking-normal flex flex-col justify-center items-center">
             <HeroSection y={y}  />
             <WhatWeDo />
             <WhoWeAre />

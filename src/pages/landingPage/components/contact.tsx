@@ -14,7 +14,7 @@ function Contact() {
     return (
         <div id="contact" className=" bg-blue/90 relative z-20 flex flex-col h-full justify-center items-center w-full">
             <div className="bg-blue bg-contain bg-blend-lighten bg-right-top flex bg-no-repeat flex-col h-full justify-center items-center w-full py-0 md:py-10">
-                <div className="w-full xl:w-[50%] bg-blue/70 md:bg-transparent rounded-sm flex flex-col justify-start items-start p-6 md:p-10 gap-4 mb-96">
+                <div className="w-full xl:w-[70%] bg-blue/70 md:bg-transparent rounded-sm flex flex-col justify-start items-start p-6 md:p-10 gap-4 mb-96">
 
                     <div className="flex flex-row justify-center items-center gap-4">
                         <div className="w-12 h-[3px] rounded-full bg-tan/90"></div>
@@ -55,7 +55,7 @@ function Contact() {
                             <AnimatePresence>
                                 {
                                     showContactInfo == false &&
-                                    <motion.div className="absolute mt-10" exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
+                                    <motion.div className="absolute" exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
                                         <Button text={"Contact me"} onClick={() => {
                                             setshowContactInfo(true);
                                             window.open("mailto:hamza@waltontech.co");
@@ -67,7 +67,7 @@ function Contact() {
                             <AnimatePresence>
                                 {
                                     showContactInfo == true &&
-                                    <motion.div className=" text-md rounded-sm absolute flex flex-col justify-start items-start gap-4 mt-10" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3, delay: 0.2 }}>
+                                    <motion.div className=" text-md rounded-sm absolute flex flex-col justify-start items-start gap-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3, delay: 0.2 }}>
                                         <button onClick={() => {
                                             window.open("mailto:hamza@waltontech.co");
                                         }} className="flex flex-row justify-center items-center gap-2">
