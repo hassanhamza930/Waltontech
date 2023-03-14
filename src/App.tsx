@@ -1,20 +1,22 @@
 import React from 'react';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import LandingPage from './pages/landingPage/landingPage';
 import Header from './standards/header';
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AnimatePresence } from 'framer-motion';
 import { motion } from "framer-motion";
+import Stories from './pages/stories/stories';
 
 function App() {
 
   const [sideBarOpen, setsideBarOpen] = useState(false);
+  const navigate=useNavigate();
 
 
   return (
     <>
-      <div className="md:hidden flex relative">
+      <div style={{fontFamily:"IBM Plex Sans"}} className="md:hidden flex relative">
         <AnimatePresence>
           {
             sideBarOpen == true &&
@@ -39,7 +41,7 @@ function App() {
                 var el = document.getElementById("whatwedo");
                 el?.scrollIntoView({ behavior: "smooth" });
               }} className="link-underline">What we do</button>
-              <button className="link-underline">Stories</button>
+              <button className="link-underline" onClick={()=>{navigate("/stories");setsideBarOpen(false);}}>Stories</button>
               <button className="link-underline">Pricing</button>
               <button onClick={() => {
                 setsideBarOpen(false);
@@ -47,6 +49,7 @@ function App() {
                 el?.scrollIntoView({ behavior: "smooth" })
               }} className="link-underline">Contact us</button>
             </motion.div>
+          
           }
         </AnimatePresence>
 
@@ -54,6 +57,7 @@ function App() {
       <Header sideBarOpen={sideBarOpen} setSideBarOpen={setsideBarOpen} ></Header>
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/stories" element={<Stories />} />
       </Routes>
     </>
   );

@@ -20,7 +20,7 @@ function HeroSection(props:ScrollInformation) {
     return (
         <BluePage>
             <div
-                style={{ backgroundImage: `url('${dotgrid}')`, opacity: 0.05, backgroundBlendMode: "difference" }}
+                style={{ backgroundImage: `url('${dotgrid}')`, opacity: 0.05, backgroundBlendMode: "difference", fontFamily:"IBM Plex Sans" }}
                 className={`absolute z-20 h-full w-full bg-center`}></div>
 
             <div className="relative z-30 flex w-full flex-col-reverse md:flex-row justify-center gap-24 items-center -mt-24 md:-mt-16">
