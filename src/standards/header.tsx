@@ -16,7 +16,7 @@ function Header(props: HeaderProps) {
     return (
         <div style={{ fontFamily: "IBM Plex Sans" }} className="fixed z-50 w-full h-16 bg-blue text-tan shadow-md flex flex-row justify-between items-center px-3 md:px-10">
 
-            <button onClick={()=>{navigate("/")}} className="outline-none">
+            <button onClick={() => { navigate("/") }} className="outline-none">
                 <img className="w-24 md:w-36 -mb-1" src={logo}></img>
             </button>
 
@@ -24,8 +24,10 @@ function Header(props: HeaderProps) {
 
                 <button onClick={async () => {
                     navigate("/");
-                    var el = document.getElementById("whatwedo");
-                    el?.scrollIntoView({ behavior: "smooth" })
+                    setTimeout(() => {
+                        var el = document.getElementById("whatwedo");
+                        el?.scrollIntoView({ behavior: "smooth" })
+                    }, 300);
                 }} className="link-underline">What we do</button>
 
                 <button className="link-underline" onClick={() => {
@@ -36,8 +38,11 @@ function Header(props: HeaderProps) {
 
                 <button onClick={() => {
                     navigate("/");
-                    var el = document.getElementById("contact");
-                    el?.scrollIntoView({ behavior: "smooth" })
+                    setTimeout(() => {
+                        var el = document.getElementById("contact");
+                        el?.scrollIntoView({ behavior: "smooth" })
+                    }, 300);
+
                 }} className="link-underline">Contact us</button>
 
             </div>

@@ -11,12 +11,12 @@ import Stories from './pages/stories/stories';
 function App() {
 
   const [sideBarOpen, setsideBarOpen] = useState(false);
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
 
   return (
     <>
-      <div style={{fontFamily:"IBM Plex Sans"}} className="md:hidden flex relative">
+      <div style={{ fontFamily: "IBM Plex Sans" }} className="md:hidden flex relative">
         <AnimatePresence>
           {
             sideBarOpen == true &&
@@ -38,18 +38,24 @@ function App() {
               className="fixed z-50 h-screen w-full text-tan bg-black/90 flex flex-col justify-start items-end pt-20 px-5 gap-4">
               <button onClick={() => {
                 setsideBarOpen(false);
-                var el = document.getElementById("whatwedo");
-                el?.scrollIntoView({ behavior: "smooth" });
+                navigate("/");
+                setTimeout(() => {
+                  var el = document.getElementById("whatwedo");
+                  el?.scrollIntoView({ behavior: "smooth" });
+                }, 1000);
               }} className="link-underline">What we do</button>
-              <button className="link-underline" onClick={()=>{navigate("/stories");setsideBarOpen(false);}}>Stories</button>
+              <button className="link-underline" onClick={() => { navigate("/stories"); setsideBarOpen(false); }}>Stories</button>
               <button className="link-underline">Pricing</button>
               <button onClick={() => {
                 setsideBarOpen(false);
-                var el = document.getElementById("contact");
-                el?.scrollIntoView({ behavior: "smooth" })
+                navigate("/");
+                setTimeout(() => {
+                  var el = document.getElementById("contact");
+                  el?.scrollIntoView({ behavior: "smooth" })
+                }, 1000);
               }} className="link-underline">Contact us</button>
             </motion.div>
-          
+
           }
         </AnimatePresence>
 
