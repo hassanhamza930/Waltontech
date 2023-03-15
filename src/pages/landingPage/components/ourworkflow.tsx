@@ -9,7 +9,7 @@ function OurWorkflow() {
     return (
         <div style={{ backgroundImage: `url('${howweworkbg}')` }} id="whoweare" className="relative z-20 bg-blue/90  flex flex-col h-full justify-center items-center w-full">
             <div className="relative bg-blue/[95%] bg-contain bg-blend-lighten bg-right-top flex bg-no-repeat flex-col h-full justify-center items-center w-full py-0 md:py-10">
-                <div className="relative w-full xl:w-[50%] rounded-sm flex flex-col justify-start items-start p-6 md:p-10">
+                <div className="relative w-full xl:w-[60%] rounded-sm flex flex-col justify-start items-start p-6 md:p-10">
 
 
 
