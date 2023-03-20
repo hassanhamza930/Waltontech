@@ -17,7 +17,7 @@ function Stories() {
 
             <div style={{ backgroundImage: `url('${storiesbg}')`, fontFamily: "IBM Plex Sans" }} className="tracking-wide bg-black h-full w-full flex flex-col justify-center items-center bg-right-top bg-contain bg-no-repeat">
 
-                <div className="p-10 bg-gradient-to-br from-blue to-black/90 backdrop-blur-sm h-[500px] w-full flex justify-center items-center">
+                <div className="p-10 bg-gradient-to-br from-blue via-blue to-blue/70 backdrop-blur-sm md:backdrop-blur-none h-screen md:h-[700px] w-full flex justify-center items-center">
 
                     <div className="w-full md:w-[60%] flex justify-start items-start flex-col gap-4">
 
@@ -29,7 +29,10 @@ function Stories() {
                             See how we delivered value to our clients.
                         </div>
 
-                        <Button text="Explore" customStyles="mt-5" onClick={() => { }} />
+                        <Button text="Explore" customStyles="mt-5" onClick={() => {
+                             var el = document.getElementById("ourclients");
+                             el?.scrollIntoView({ behavior: "smooth" })
+                         }} />
 
                     </div>
 
@@ -51,7 +54,7 @@ function Stories() {
 
                     <div className="flex flex-wrap w-full gap-4 mt-10 tracking-tight">
 
-                        <button onClick={()=>{window.open("https://careernetwork.co")}} style={{ backgroundImage: `url('${cncardbg}')` }} className="hover:scale-[1.02] hover:shadow-2xl h-72 w-full md:h-96 md:w-96 bg-cover bg-center bg-no-repeat bg-black rounded-md flex flex-col justify-center items-start">
+                        <button id="ourclients" onClick={()=>{window.open("https://careernetwork.co")}} style={{ backgroundImage: `url('${cncardbg}')` }} className="hover:scale-[1.02] hover:shadow-2xl h-72 w-full md:h-96 md:w-96 bg-cover bg-center bg-no-repeat bg-black rounded-md flex flex-col justify-center items-start">
                             <div className="bg-blue/[70%] backdrop-blur-sm h-full w-full flex flex-col justify-center items-center p-5">
                                 <div className="text-tan w-full rounded-sm font-semibold tracking-normal text-2xl md:text-4xl flex item-center justify-center">CareerNetwork.co</div>
                                 <div className="text-tan w-full rounded-sm font-light tracking-normal text-sm md:text-md flex item-center justify-center">A Career Focused Social Media App</div>

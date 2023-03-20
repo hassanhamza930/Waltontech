@@ -34,7 +34,16 @@ function Header(props: HeaderProps) {
                     navigate("/stories")
                 }} >Stories</button>
 
-                <button className="link-underline">Pricing</button>
+                <button
+                    onClick={() => {
+                        navigate("/pricing");
+                        setTimeout(() => {
+                            var el = document.getElementById("contact");
+                            el?.scrollIntoView({ behavior: "smooth" })
+                        }, 300);
+
+                    }}
+                    className="link-underline">Pricing</button>
 
                 <button onClick={() => {
                     navigate("/");
