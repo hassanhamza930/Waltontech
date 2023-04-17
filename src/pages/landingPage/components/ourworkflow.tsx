@@ -9,7 +9,7 @@ function OurWorkflow() {
     return (
         <div style={{ backgroundImage: `url('${howweworkbg}')` }} id="whoweare" className="relative z-20 bg-blue/90  flex flex-col h-full justify-center items-center w-full">
             <div className="relative bg-blue/[95%] bg-contain bg-blend-lighten bg-right-top flex bg-no-repeat flex-col h-full justify-center items-center w-full py-0 md:py-10">
-                <div className="relative w-full xl:w-[60%] rounded-sm flex flex-col justify-start items-start p-6 md:p-10">
+                <div className="relative w-full xl:w-[70%] rounded-sm flex flex-col justify-start items-start p-6 md:p-10">
 
 
 
@@ -18,7 +18,7 @@ function OurWorkflow() {
                         <div className="text-sm font-regular text-tan/90">How we work</div>
                     </div>
 
-                    <div className="text-4xl md:text-5xl font-bold text-tan/90 mt-4">Our Workflow for End to End Success</div>
+                    <div className="text-4xl md:text-5xl font-bold text-tan/90 mt-4">Our Workflow for End to End Product Success</div>
 
                     <div className="flex flex-1 flex-wrap justify-start gap-4 mt-10 w-full">
 

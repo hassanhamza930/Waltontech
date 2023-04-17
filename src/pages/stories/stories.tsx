@@ -44,7 +44,7 @@ function Stories() {
 
             <div className="flex flex-col justify-center items-center h-full w-full bg-black/80 ">
 
-                <div className="w-full xl:w-[60%] backdrop-blur-md rounded-sm flex flex-col justify-start items-start p-6 md:p-10 gap-4 my-10">
+                <div className="w-full xl:w-[70%] backdrop-blur-md rounded-sm flex flex-col justify-start items-start p-6 md:p-10 gap-4 my-10">
 
                     <div className="flex flex-row justify-center items-center gap-4">
                         <div className="w-12 h-[3px] rounded-full bg-tan/90"></div>
@@ -54,7 +54,7 @@ function Stories() {
 
                     <div className="flex flex-wrap w-full gap-4 mt-10 tracking-tight">
 
-                        <button id="ourclients" onClick={()=>{window.open("https://careernetwork.co")}} style={{ backgroundImage: `url('${cncardbg}')` }} className="hover:scale-[1.02] hover:shadow-2xl h-72 w-full md:h-96 md:w-96 bg-cover bg-center bg-no-repeat bg-black rounded-md flex flex-col justify-center items-start">
+                        <button id="ourclients" onClick={()=>{window.open("https://careernetwork.co")}} style={{ backgroundImage: `url('${cncardbg}')` }} className="hover:scale-[1.02] hover:shadow-2xl h-72 w-full md:h-72 md:w-72 bg-cover bg-center bg-no-repeat bg-black rounded-md flex flex-col justify-center items-start">
                             <div className="bg-blue/[70%] backdrop-blur-sm h-full w-full flex flex-col justify-center items-center p-5">
                                 <div className="text-tan w-full rounded-sm font-semibold tracking-normal text-2xl md:text-4xl flex item-center justify-center">CareerNetwork.co</div>
                                 <div className="text-tan w-full rounded-sm font-light tracking-normal text-sm md:text-md flex item-center justify-center">A Career Focused Social Media App</div>

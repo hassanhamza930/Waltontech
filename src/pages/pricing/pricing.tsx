@@ -33,7 +33,7 @@ function Pricing() {
 
             <div className="flex flex-col justify-center items-center h-full w-full bg-black/80 ">
 
-                <div className="w-full xl:w-[60%] backdrop-blur-md rounded-sm flex flex-col justify-start items-start p-6 md:p-10 gap-4 my-10">
+                <div className="w-full xl:w-[70%] backdrop-blur-md rounded-sm flex flex-col justify-start items-start p-6 md:p-10 gap-4 my-10">
 
                     <div className="flex flex-row justify-center items-center gap-4">
                         <div className="w-12 h-[3px] rounded-full bg-tan/90"></div>
