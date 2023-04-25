@@ -8,96 +8,93 @@ import BluePage from "../../../styles/layouts/bluepage";
 import Button from "../../../styles/components/button";
 import { useSpring } from "framer-motion";
 import { useEffect } from "react";
+import bg from "../../../images/bg.gif"
+import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import backdrop from "../../../images/backdrop.png";
 
 
-interface ScrollInformation{
-    y:number
+interface ScrollInformation {
+    y: number
 }
 
-function HeroSection(props:ScrollInformation) {
+function HeroSection(props: ScrollInformation) {
 
+    const [ticked, setTicked] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setTicked(true);
+        }, 1900);
+    }, []);
+
+    var line = "for the startup";
 
     return (
-        <BluePage>
-            <div
-                style={{ backgroundImage: `url('${dotgrid}')`, opacity: 0.05, backgroundBlendMode: "difference", fontFamily:"IBM Plex Sans" }}
-                className={`absolute z-20 h-full w-full bg-center`}></div>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }} style={{ backgroundImage: `url('${bg}')`, fontFamily: "IBM Plex Sans" }} className="h-screen w-full bg-no-repeat bg-center bg-cover flex justify-center items-start flex-col text-tan">
 
-            <div className="relative z-30 flex w-full flex-col-reverse md:flex-row justify-center gap-24 items-center -mt-24 md:-mt-16">
+            <div className={`absolute z-10 h-screen bg-gradient-to-br md:bg-gradient-to-r from-purp via-purp/80 md:via-purp/80 to-purp/0 bg-cover bg-no-repeat w-full bg-center`}></div>
+            <div style={{backgroundImage:`url('${backdrop}')`}} className={`absolute opacity-50 z-20 backdrop-blur-sm h-screen bg-cover bg-no-repeat w-full bg-center`}></div>
 
-                <motion.div transition={{ease:"easeInOut",duration:0.1}} className=" flex flex-col justify-start items-start">
-                    <div className="overflow-y-hidden">
-                        <div className="relative flex py-2 flex-row w-full justify-center items-center overflow-hidden">
-                            <motion.div initial={{ opacity: 0, y: 300 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2 }} >
-                                <div className="relative w-full text-4xl md:text-5xl font-bold flex flex-wrap gap-2">
-                                    <div>We create value </div>
-                                    <div className="relative w-full flex flex-col md:flex-row gap-3 justify-start items-start"> through <RollingText /></div>
-                                </div>
-                            </motion.div>
+            <div className="px-10 md:px-[20%] relative z-30 flex flex-col h-full w-full justify-center items-start">
+                <div className="relative flex py-2 flex-col gap-3 w-full justify-start items-start overflow-hidden">
+                    <motion.div initial={{ opacity: 0, y: 200 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} >
+                        <div className="relative w-full text-4xl md:text-5xl font-bold flex flex-wrap gap-2">
+                            <div>Software Development</div>
                         </div>
-                    </div>
-                    <div className="h-auto md:h-10 mt-2 overflow-y-hidden">
-                        <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, delay: 0.6 }} ><SubHeading text="A Software Development Agency"></SubHeading></motion.div>
-                    </div>
-                    <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1,delay:2}}>
-                        <Button customStyles="mt-10 shadow-sm" text="Talk to us about your idea" onClick={() => {
-                            var el = document.getElementById("contact");
-                            el?.scrollIntoView({ behavior: "smooth" });
-                        }}></Button>
                     </motion.div>
-                </motion.div>
 
-                <div className="hidden xl:flex relative h-[250px] w-[250px] md:h-[450px] md:w-[450px] justify-start items-end ">
-                    <motion.div
-                        initial={{
-                            opacity: 0,
-                            y: 100
-                        }}
-                        animate={{
-                            opacity:1,
-                            x:(props.y*0.2),
-                            y: 0,
-                            // duration:4
-                        }}
-                        transition={{
-                            duration: 0.8,
-                        }}
-                        style={{ backgroundImage: `url('${argoggles}')` }}
-                        className="absolute bg-center bg-cover z-30 rounded-full h-[250px] w-[250px] md:h-[450px] md:w-[450px] bg-tan shadow-2xl"></motion.div>
-                    <motion.div
-                        initial={{
-                            opacity: 0,
-                            y: 100
-                        }}
-                        animate={{
-                            opacity: 1,
-                            x:(props.y*0.15),
-                            y: 0
-                        }}
-                        transition={{
-                            duration: 1.2,
-                        }}
-                        style={{ backgroundImage: `url('${argoggles2}')` }}
-                        className="absolute bg-center bg-cover z-20 rounded-full h-[200px] w-[200px] md:h-[400px] md:w-[400px] bg-tan/20 -ml-4 -mb-4 shadow-2xl"></motion.div>
-                    <motion.div
-                        initial={{
-                            opacity: 0,
-                            y: 100
-                        }}
-                        animate={{
-                            opacity: 1,
-                            x:(props.y*0.1),
-                            y: 0
-                        }}
-                        transition={{
-                            duration: 1.6,
-                        }}
-                        className="absolute z-10 rounded-full h-[150px] w-[150px] md:h-[350px] md:w-[350px] bg-tan/70 -ml-8 -mb-8 shadow-2xl"></motion.div>
+                    <div style={{ fontFamily: "Crimson Pro" }} className="text-3xl md:text-4xl font-medium italic relative z-20 h-12 md:h-16 w-52 md:w-64 justify-center overflow-y-hidden items-center">
+
+                        <motion.div
+                            initial={{ scaleX:0,x: -50,opacity:0 }}
+                            animate={{  scaleX:1,x: 0,opacity:1 }}
+                            transition={{ duration: 0.7,delay:1 }}
+                            className="border-b-4 border-tan h-full w-full absolute z-0"></motion.div>
+
+                        <motion.div
+                            initial={{  scaleX:0,x: -50,opacity:0 }}
+                            animate={{  scaleX:1,x: 0 ,opacity:1}}
+                            transition={{ duration:1,delay:1.4 }}
+                            className="bg-tan h-full w-full absolute z-0"></motion.div>
+
+                        <AnimatePresence>
+                            {
+                                ticked == true &&
+                                <motion.div className="text-purp h-full w-full relative px-4 py-2 z-10 flex flex-row gap-2 md:gap-3 justify-center items-center">
+                                    {
+                                        line.split(" ").map((char, index) => {
+                                            return (
+                                                <motion.div
+                                                    initial={{ y: 50 * (index + 1) }}
+                                                    animate={{ y: 0 }}
+                                                    transition={{ delay: 0.05 * (index + 1), duration: 0.4 * (index + 1) }}
+                                                    className="relative z-10 flex justify-center items-center">
+                                                    {char}
+                                                </motion.div>
+                                            )
+                                        })
+                                    }
+
+                                </motion.div>
+                            }
+                        </AnimatePresence>
+
+                    </div>
+
+
 
                 </div>
 
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 2 }}>
+                    <Button customStyles="mt-10 shadow-sm" text="Explore" onClick={() => {
+                        var el = document.getElementById("contact");
+                        el?.scrollIntoView({ behavior: "smooth" });
+                    }}></Button>
+                </motion.div>
             </div>
-        </BluePage>
+
+        </motion.div>
     );
 }
 

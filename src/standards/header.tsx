@@ -14,7 +14,7 @@ function Header(props: HeaderProps) {
     const navigate = useNavigate();
 
     return (
-        <div style={{ fontFamily: "IBM Plex Sans" }} className="fixed z-50 w-full h-16 bg-blue text-tan shadow-md flex flex-row justify-between items-center px-3 md:px-10">
+        <div style={{ fontFamily: "IBM Plex Sans" }} className="fixed z-50 w-full h-16 bg-purp text-tan shadow-xl flex flex-row justify-between items-center px-3 md:px-20">
 
             <button onClick={() => { navigate("/") }} className="outline-none">
                 <img className="w-24 md:w-36 -mb-1" src={logo}></img>

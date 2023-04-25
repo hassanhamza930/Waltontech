@@ -7,42 +7,45 @@ function RollingText() {
 
     const [selectedWordIndex, setselectedWordIndex] = useState(0);
 
-    const words = ["Design", "Collaboration", "Software", "Innovation"]
+    var line = "for the startup";
 
-    function tick() {
-        setTimeout(() => {
-            if (selectedWordIndex == (words.length - 1)) {
-                setselectedWordIndex(0);
-            }
-            else {
-                setselectedWordIndex(selectedWordIndex + 1);
-            }
-        }, 4000);
-    }
+    // function tick() {
+    //     setTimeout(() => {
+    //         if (selectedWordIndex == (words.length - 1)) {
+    //             setselectedWordIndex(0);
+    //         }
+    //         else {
+    //             setselectedWordIndex(selectedWordIndex + 1);
+    //         }
+    //     }, 4000);
+    // }
 
     useEffect(() => {
-        tick();
+        // tick();
     }, [selectedWordIndex])
 
 
 
     return (
-        <div className="relative text-4xl md:text-5xl font-bold text-tan h-16 ">
-            {
-                words.map((word, index) => {
-                    return (
-                        <AnimatePresence  key={index}>
-                            {
-                                selectedWordIndex == index &&
-                                    <motion.div className="absolute" key={index} initial={{ opacity: 0,y:50,rotateX:30 }} animate={{ opacity: 1,y:0,rotateX:0 }} exit={{ opacity: 0,y:-50,rotateX:-30 }} transition={{ duration: 0.8 }} >
-                                        {word}
-                                    </motion.div>
-                            }
-                        </AnimatePresence>
-                    )
-                })
-            }
-        </div>
+        <AnimatePresence>
+            <motion.div
+                intial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 3 }}
+                style={{ fontFamily: "Crimson Pro", }} className="italic relative text-3xl md:text-4xl font-medium bg-tan flex flex-wrap gap-3 text-purp px-4 py-2 h-14 justify-center items-center ">
+                {
+                    line.split(" ").map((word, index) => {
+                        return (
+                            <AnimatePresence key={index}>
+                                <motion.div className="relative" key={index} initial={{ opacity: 0, y: 50 * (index + 1), rotateX: 30 }} animate={{ opacity: 1, y: 0, rotateX: 0 }} transition={{ duration: 0.3 * (index + 1) }} >
+                                    {word}
+                                </motion.div>
+                            </AnimatePresence>
+                        )
+                    })
+                }
+            </motion.div>
+        </AnimatePresence>
     );
 }
 
