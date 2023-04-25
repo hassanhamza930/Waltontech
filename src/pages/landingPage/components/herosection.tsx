@@ -14,6 +14,7 @@ import { useState } from "react";
 import backdrop from "../../../images/backdrop.png";
 import cncard from "../../../images/cncardbg.svg"
 import posters from "../../../images/posters.png"
+import mainbg from "../../../images/mainbg.png"
 
 interface ScrollInformation {
     y: number
@@ -34,14 +35,14 @@ function HeroSection(props: ScrollInformation) {
     return (
         <div style={{ fontFamily: "IBM Plex Sans" }} className=" h-screen w-full bg-no-repeat bg-center bg-cover flex justify-center items-start flex-col text-tan">
 
-            <div className={`absolute z-10 h-screen bg-gradient-to-br md:bg-gradient-to-r from-purp via-purp/[0.95] to-purp/0 backdrop-blur-sm bg-cover bg-no-repeat w-full bg-center`}></div>
-            <div style={{ backgroundImage: `url('${backdrop}')` }} className={`absolute opacity-100 z-20 h-screen bg-cover bg-no-repeat w-full bg-center`}></div>
+            {/* <div className={`absolute z-10 h-screen bg-gradient-to-r from-purp via-purp/90 to-purp/60 md:to-purp/70 backdrop-blur-sm bg-cover bg-no-repeat w-full bg-center`}></div> */}
+            <div style={{ backgroundImage: `url('${mainbg}')` }} className={`absolute opacity-100 z-20 h-screen bg-cover bg-no-repeat w-full bg-center`}></div>
 
-            <div className="absolute z-0 flex h-screen w-full rounded-md">
+            {/* <div className="absolute z-0 flex h-screen w-full rounded-md">
                 <div style={{ backgroundImage: `url('${posters}')` }} className=" rounded-md backdrop-blur-xl bg-center bg-cover bg-no-repeat h-full w-full">
 
                 </div>
-            </div>
+            </div> */}
 
             <div className="flex flex-row w-full h-full justify-center items-center">
                 <div className=" px-10 md:px-[10%] relative z-30 flex flex-col h-full w-full justify-center items-start">
