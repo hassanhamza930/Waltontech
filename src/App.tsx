@@ -6,7 +6,8 @@ import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AnimatePresence } from 'framer-motion';
 import { motion } from "framer-motion";
-
+import Stories from './pages/stories/stories';
+import Pricing from './pages/pricing/pricing';
 
 function App() {
 
@@ -63,6 +64,8 @@ function App() {
       <Header sideBarOpen={sideBarOpen} setSideBarOpen={setsideBarOpen} ></Header>
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/stories" element={<Stories />} />
+        <Route path="/pricing" element={<Pricing />} />
       </Routes>
     </>
   );
