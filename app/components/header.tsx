@@ -3,7 +3,7 @@
 import { useState } from "react";
 import logo from "../../images/logo.svg";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Image from 'next/image';
 import {motion, AnimatePresence} from "framer-motion";
 
@@ -17,6 +17,7 @@ interface HeaderProps {
 function Header(props: HeaderProps) {
 
     const router = useRouter();
+    const pathname=usePathname();
 
     return (
         <>
@@ -78,11 +79,14 @@ function Header(props: HeaderProps) {
                 <div className="hidden md:flex font-light flex-row justify-center items-center gap-12">
 
                     <button onClick={async () => {
-                        router.push("/");
+                           if(pathname=="/"){}
+                           else{
+                               router.push("/");
+                           }   
                         setTimeout(() => {
                             var el = document.getElementById("whatwedo");
                             el?.scrollIntoView({ behavior: "smooth" })
-                        }, 300);
+                        }, 700);
                     }} className="link-underline">What we do</button>
 
                     <button className="link-underline" onClick={() => {
@@ -92,20 +96,24 @@ function Header(props: HeaderProps) {
                     <button
                         onClick={() => {
                             router.push("/pricing");
-                            setTimeout(() => {
-                                var el = document.getElementById("contact");
-                                el?.scrollIntoView({ behavior: "smooth" })
-                            }, 300);
+                            // setTimeout(() => {
+                            //     var el = document.getElementById("contact");
+                            //     el?.scrollIntoView({ behavior: "smooth" })
+                            // }, 300);
 
                         }}
                         className="link-underline">Pricing</button>
 
                     <button onClick={() => {
-                        router.push("/");
+                        if(pathname=="/"){}
+                        else{
+                            router.push("/");
+                        }
+
                         setTimeout(() => {
                             var el = document.getElementById("contact");
                             el?.scrollIntoView({ behavior: "smooth" })
-                        }, 300);
+                        }, 700);
 
                     }} className="link-underline">Contact us</button>
 

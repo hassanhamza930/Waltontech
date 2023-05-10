@@ -12,7 +12,7 @@ module.exports = {
         "tan":"#FFFFFF",
         "blue":"#0658F6",
         "black":"#101010",
-        "purp":"#210062"
+        "purp":"#331260"
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
