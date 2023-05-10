@@ -6,6 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { usePathname, useRouter } from "next/navigation";
 import Image from 'next/image';
 import {motion, AnimatePresence} from "framer-motion";
+import { NavigateOptions } from "next/dist/shared/lib/app-router-context";
 
 interface HeaderProps {
     sideBarOpen: boolean,
@@ -43,17 +44,17 @@ function Header(props: HeaderProps) {
                             className="fixed z-50 h-screen w-full text-tan bg-black/90 flex flex-col justify-start items-end pt-20 px-5 gap-4">
                             <button onClick={() => {
                                 props.setSideBarOpen(false);
-                                router.push("/");
+                                router.push("/",{forceOptimisticNavigation:true} as NavigateOptions);
                                 setTimeout(() => {
                                     var el = document.getElementById("whatwedo");
                                     el?.scrollIntoView({ behavior: "smooth" });
                                 }, 1000);
                             }} className="link-underline">What we do</button>
-                            <button className="link-underline" onClick={() => { router.push("/stories"); props.setSideBarOpen(false); }}>Stories</button>
+                            <button className="link-underline" onClick={() => { router.push("/stories",{forceOptimisticNavigation:true} as NavigateOptions); props.setSideBarOpen(false); }}>Stories</button>
                             <button className="link-underline">Pricing</button>
                             <button onClick={() => {
                                 props.setSideBarOpen(false);
-                                router.push("/");
+                                router.push("/",{forceOptimisticNavigation:true} as NavigateOptions);
                                 setTimeout(() => {
                                     var el = document.getElementById("contact");
                                     el?.scrollIntoView({ behavior: "smooth" })
@@ -67,7 +68,7 @@ function Header(props: HeaderProps) {
             </div>
             <div className="fixed z-50 w-full h-16 bg-blue text-tan shadow-md flex flex-row justify-between items-center px-3 md:px-10">
 
-                <button onClick={() => { router.push("/") }} className="outline-none">
+                <button onClick={() => { router.push("/",{forceOptimisticNavigation:true} as NavigateOptions) }} className="outline-none">
                     {/* <img className="w-24 md:w-36 -mb-1" src={logo}></img> */}
                     <Image
                         src={logo}
@@ -81,7 +82,7 @@ function Header(props: HeaderProps) {
                     <button onClick={async () => {
                            if(pathname=="/"){}
                            else{
-                               router.push("/");
+                               router.push("/",{forceOptimisticNavigation:true} as NavigateOptions);
                            }   
                         setTimeout(() => {
                             var el = document.getElementById("whatwedo");
@@ -90,7 +91,7 @@ function Header(props: HeaderProps) {
                     }} className="link-underline">What we do</button>
 
                     <button className="link-underline" onClick={() => {
-                        router.push("/stories")
+                        router.push("/stories",{forceOptimisticNavigation:true} as NavigateOptions)
                     }} >Stories</button>
 
                     <button
@@ -107,7 +108,7 @@ function Header(props: HeaderProps) {
                     <button onClick={() => {
                         if(pathname=="/"){}
                         else{
-                            router.push("/");
+                            router.push("/",{forceOptimisticNavigation:true} as NavigateOptions);
                         }
 
                         setTimeout(() => {
