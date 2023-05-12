@@ -26,7 +26,7 @@ function Contact() {
 
                         <div className="flex w-full flex-col md:flex-row-reverse justify-start items-start gap-6 mt-4">
 
-                            <div style={{ backgroundImage: `url('${hamza.src}')` }} className=" h-52 md:h-64 w-52 md:w-64 bg-no-repeat bg-left bg-contain mt-3 flex flex-col justify-end items-start p-3 md:p-5">
+                            <div style={{ backgroundImage: `url('${hamza.src}')` }} className=" h-36 md:h-64 w-36 md:w-64 bg-no-repeat bg-left bg-contain mt-3 flex flex-col justify-end items-start p-3 md:p-5">
                                 
                                 <div className="md:flex hidden text-2xl font-regular text-tan/90">Hamza Hassan</div>
                                 <div className="md:flex hidden text-sm md:text-md font-regular text-tan/90">Business Development Lead</div>
@@ -40,7 +40,7 @@ function Contact() {
                                 <div className="mt-4">
                                     My name is Hamza and I'm excited to hear from you.
 
-                                    As a partner at Walton.co,<br /> I have a passion for technology and a dedication to delivering high-quality solutions that meet your needs.<br /><br />
+                                    As a partner at Waltontech,<br /> I have a passion for technology and a dedication to delivering high-quality solutions.<br /><br />
 
                                     When you contact me, you'll be met by a real person who is ready to listen to your ideas, answer your questions, and provide expert guidance.<br /><br />
 

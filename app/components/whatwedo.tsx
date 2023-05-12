@@ -7,7 +7,7 @@ function WhatWeDo() {
     return ( 
         <div style={{backgroundImage:(`url('${whatwedobg.src}')`)}} id="whatwedo" className="relative z-20 bg-cover bg-center flex flex-col h-full justify-center items-center w-full">
                 <div className="flex  bg-blue/50 flex-col h-full justify-center items-center w-full py-0 md:py-20">
-                    <div className="w-full xl:w-[70%] bg-tan/90 backdrop-blur-md rounded-sm flex flex-col justify-start items-start p-6 md:p-10 gap-4">
+                    <div className="w-full xl:w-[50%] bg-tan/90 backdrop-blur-md rounded-sm flex flex-col justify-start items-start p-6 md:p-10 gap-4">
 
                         <div className="flex flex-row justify-center items-center gap-4">
                             <div className="w-12 h-[3px] rounded-full bg-blue/90"></div>
@@ -15,17 +15,15 @@ function WhatWeDo() {
                         </div>
 
                         <div className="flex justify-start items-start flex-col gap-5">
-                            <div className="text-4xl md:text-5xl font-bold text-black/90">We build SaaS products <br />for the web.</div>
+                            <div className="text-4xl md:text-5xl font-bold text-black/90">We build products<br/> for the web.</div>
                             <div className="text-md font-regular text-black/90">
-                                We offer a wide range of services, including web development and custom software development. Whether you need a simple website or a complex software application, we have the skills and expertise to deliver high-quality solutions that meet your specific needs.<br /><br />
+                                At our core we are web specialists, whether you are rebranding an old landing page or creating a fully bootstrapped SaaS app, we have you covered. <br/><br/>
 
-                                At our company, we take a collaborative approach to development. We work closely with you to understand your goals, identify your pain points, and create a solution that addresses your unique challenges. We pride ourselves on our ability to deliver projects on time and on budget, without compromising on quality.<br /><br />
-
-                                We understand the importance of staying up-to-date with the latest trends and technologies in web and mobile development. That's why we invest heavily in training and professional development for our team members. This ensures that we can provide you with the most innovative and cutting-edge solutions that will give you a competitive edge in your industry.<br /><br />
+                                At our company, we take a collaborative approach to development. We work closely with you to understand your goals, identify your pain points, and create a solution that addresses your unique challenges and creates a memorable experience for your customers.
                             </div>
                         </div>
 
-                        <div className="flex flex-row justify-center items-center -mt-6 md:-mt-12">
+                        <div className="flex flex-row justify-center items-center ">
                             <Image src={laptop} alt="laptop" className="w-52 h-52 md:h-72 md:w-72 bg-contain bg-center bg-no-repeat">
                             </Image>
 
