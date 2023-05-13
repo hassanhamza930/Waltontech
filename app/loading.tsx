@@ -11,7 +11,7 @@ function Loading() {
            initial={{opacity:0}}
             animate={{opacity:1}}
             transition={{duration:0.7}}
-           className="bg-tan animate-bounce duration-300 rounded-sm h-16 w-16">
+           className="bg-gradient-to-br from-tan to-tan/30 backdrop-blur-xl animate-bounce duration-300 rounded-full h-12 w-12">
 
            </motion.div>
         </div>
