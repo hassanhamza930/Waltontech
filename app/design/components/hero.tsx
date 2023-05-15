@@ -8,7 +8,7 @@ function Hero() {
                 <div className="text-3xl md:text-5xl font-light">We are a full stack UI/UX design agency <br/>in the heart of Pakistan.</div>
                 
                 <div 
-                style={{backgroundImage:`url("https://images.unsplash.com/photo-1642615835477-d303d7dc9ee9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")`}} 
+                style={{backgroundImage:`url("https://images.unsplash.com/photo-1625613931276-6d9535389055?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60")`}} 
                 className="mt-24 bg-cover bg-center bg-no-repeat h-screen w-full bg-black/90 rounded-xl">
                 </div>
 
