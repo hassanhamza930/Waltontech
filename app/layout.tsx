@@ -19,7 +19,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
   const [sideBarOpen, setsideBarOpen] = useState(false);
 
   return (
-    <html style={{fontFamily:plex.style.fontFamily}} className={"bg-blue h-screen w-full"}>
+    <html style={{fontFamily:plex.style.fontFamily}} className={"bg-black/90 h-screen w-full"}>
       <motion.body
       initial={{opacity:0}}
       animate={{opacity:1}}

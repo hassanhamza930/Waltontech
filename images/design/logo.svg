@@ -1,0 +1,19 @@
+<svg width="130" height="125" viewBox="0 0 130 125" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_360_2551" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="7" width="110" height="110">
+<circle cx="65.0303" cy="61.8751" r="54.194" transform="rotate(-60 65.0303 61.8751)" fill="url(#paint0_linear_360_2551)"/>
+</mask>
+<g mask="url(#mask0_360_2551)">
+<circle cx="65.0303" cy="61.8751" r="54.194" transform="rotate(-60 65.0303 61.8751)" fill="url(#paint1_linear_360_2551)"/>
+<path d="M28.9216 123L-1.36915 9.32823L2.53933 9.32823L31.2016 117.952H31.6901L62.1437 9.32823L67.355 9.32823L97.8087 117.952H98.2972L127.122 9.32823L130.868 9.32823L100.577 123H95.6916L64.9122 13.2367H64.4237L33.8072 123H28.9216Z" fill="white"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_360_2551" x1="65.0303" y1="7.68117" x2="63.6228" y2="167.001" gradientUnits="userSpaceOnUse">
+<stop stop-opacity="0.9"/>
+<stop offset="1" stop-opacity="0.8"/>
+</linearGradient>
+<linearGradient id="paint1_linear_360_2551" x1="65.0303" y1="7.68117" x2="63.6228" y2="167.001" gradientUnits="userSpaceOnUse">
+<stop stop-opacity="0.9"/>
+<stop offset="1" stop-opacity="0.8"/>
+</linearGradient>
+</defs>
+</svg>

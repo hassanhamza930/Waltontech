@@ -6,7 +6,7 @@ import {motion} from "framer-motion";
 
 function Loading() {
     return ( 
-        <div className="flex bg-blue justify-center items-center h-screen w-full fixed z-[90]">
+        <div className="flex bg-black justify-center items-center h-screen w-full fixed z-[90]">
            <motion.div 
            initial={{opacity:0}}
             animate={{opacity:1}}
