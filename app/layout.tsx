@@ -6,6 +6,7 @@ import './globals.css'
 import { IBM_Plex_Sans} from 'next/font/google';
 import Footer from './components/footer';
 import { motion } from 'framer-motion';
+import { RecoilRoot } from 'recoil';
 
 // If loading a variable font, you don't need to specify the font weight
 const plex = IBM_Plex_Sans({
@@ -26,7 +27,9 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       transition={{duration:0.5}}
       >
         <Header sideBarOpen={sideBarOpen} setSideBarOpen={setsideBarOpen} />
+        <RecoilRoot>
         {children}
+        </RecoilRoot>
         <Footer/>
       </motion.body>
     </html>
