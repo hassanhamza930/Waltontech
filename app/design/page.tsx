@@ -48,6 +48,7 @@ function Design() {
             </AnimatePresence>
 
             <Hero/>
+            
             <div className="h-screen w-full bg-black flex justify-center items-center">
                 <div ref={ref} className="h-24 w-24 rounded-md bg-tan"></div>
             </div>

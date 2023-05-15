@@ -124,7 +124,7 @@ function Header(props: HeaderProps) {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.5 }}
-                        style={{ backgroundColor: "" }} className="w-full fixed z-10 flex pt-10 py-3 flex-row justify-between items-center px-5 md:px-[15%]">
+                        style={{ backgroundColor: "" }} className="w-full fixed z-10 flex pt-10 py-3 flex-row justify-between items-center px-5 md:px-[5%]">
                         <div className="flex flex-row justify-center items-center gap-2 ">
                             <Image src={logo} alt="waltondesign logo" className="h-12 w-12 md:h-20 md:w-20" />
                             <AnimatedText text="Walton" />
@@ -145,7 +145,7 @@ function Header(props: HeaderProps) {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        style={{ backgroundColor: "" }} className="w-full fixed z-10 flex pt-10 py-3 flex-row justify-between items-center px-5 md:px-[15%]">
+                        style={{ backgroundColor: "" }} className="w-full fixed z-10 flex pt-10 py-3 flex-row justify-between items-center px-5 md:px-[5%]">
                         <div className="flex flex-row justify-center items-center gap-2 text-tan ">
                             <Image src={logo} alt="waltondesign logo" className="invert h-12 w-12 md:h-20 md:w-20" />
                             <AnimatedText text="Walton" />
