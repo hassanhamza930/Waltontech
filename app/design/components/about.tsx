@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 function About() {
     return (
         <div className="flex justify-center items-center w-full h-full">
-            <div className="flex flex-col md:flex-row justify-center items-center w-[80%] md:gap-0 gap-12 md:w-[60%] h-full bg-tan text-black/90 py-24 md:py-72">
+            <div className="flex flex-col md:flex-row justify-center items-center w-[80%] md:gap-0 gap-12 md:w-[60%] h-full bg-tan text-black/90 pt-52 pb-24">
 
                 <div className="flex justify-start items-center w-full h-full ">
                     <motion.div
@@ -27,7 +27,7 @@ function About() {
 
                 <div className="flex flex-col w-full h-full justify-start md:justify-center  items-center font-regular md:font-light">
 
-                    <div className="flex flex-col justify-start items-start gap-6 w-full md:w-2/4">
+                    <div className="flex flex-col justify-start items-start gap-6 w-full md:w-3/5 ">
 
                         <motion.div 
                          initial="hidden"
@@ -39,7 +39,7 @@ function About() {
                          whileInView={"visible"}
                         className="flex flex-row justify-center items-end gap-3">
                             <div className="text-6xl font-bold">7</div>
-                            <div className="text-xl font-regular">Developers & Designers</div>
+                            <div className="text-xl font-regular flex-none">Developers & Designers</div>
                         </motion.div>
 
                         <motion.div
@@ -52,7 +52,7 @@ function About() {
                         whileInView={"visible"}
                         className="flex flex-row justify-center items-end gap-3">
                             <div className="text-6xl font-bold">3</div>
-                            <div className="text-xl font-regular">Years in business</div>
+                            <div className="text-xl font-regular flex-none">Years in business</div>
                         </motion.div>
 
                     </div>

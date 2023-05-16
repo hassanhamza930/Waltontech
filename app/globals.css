@@ -1,7 +1,40 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  cursor: none;
+  }
+
+.dot {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  pointer-events: none;
+}
+
+
+@keyframes cursorAnim {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.expand {
+  animation: cursorAnim 1s forwards;
+}
 
 
 

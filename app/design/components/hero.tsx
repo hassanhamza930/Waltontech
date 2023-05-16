@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 function Hero() {
     return (
         <div className="bg-tan flex h-full w-full justify-center items-center">
-            <div className="h-full flex flex-col justify-start w-full items-center pt-96 pb-24">
+            <div className="h-full flex flex-col justify-start w-full items-center pt-96 md:pb-24">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
