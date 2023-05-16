@@ -61,13 +61,13 @@ export function SideMenu(props: HeaderProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="h-screen w-full fixed z-20 bg-black/90 backdrop-blur-sm flex justify-end items-start p-5">
+            className="h-screen w-full fixed z-20 bg-black/90 backdrop-blur-sm flex justify-end items-start p-5 md:px-[10%] md:py-10">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3, delay: 0.1 }}
-                className="bg-tan/90 text-purp shadow-xl rounded-md gap-5 pb-20 w-full md:w-96 p-10 flex flex-col justify-start items-start">
+                className="bg-tan/90 text-black/90 shadow-xl rounded-md gap-5 pb-20 w-full md:w-96 p-10 flex flex-col justify-start items-start">
                 <button onClick={() => { props.setSideBarOpen(false); }} className="flex hover:scale-[1.03] transition-all duration-300 flex-row w-full justify-end items-end">
                     <AiOutlineClose size={25} className=" " />
                 </button>
@@ -127,7 +127,7 @@ function Header(props: HeaderProps) {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="bg-tan md:bg-transparent w-full fixed z-10 flex py-3 pt-10 flex-row justify-between items-center px-5 md:px-[5%]">
+                        className="bg-tan md:bg-transparent w-full fixed z-10 flex py-3 pt-10 flex-row justify-between items-center px-5 md:px-[10%]">
                         <div className="flex flex-row justify-center items-center gap-2 ">
                             <Image src={logo} alt="waltondesign logo" className="h-12 w-12 md:h-20 md:w-20" />
                             <AnimatedText weight={100} className="text-3xl md:text-4xl" text="Walton" />
@@ -148,7 +148,7 @@ function Header(props: HeaderProps) {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="bg-black md:bg-transparent w-full fixed z-10 flex py-3 pt-10 flex-row justify-between items-center px-5 md:px-[5%]">
+                        className="bg-black md:bg-transparent w-full fixed z-10 flex py-3 pt-10 flex-row justify-between items-center px-5 md:px-[10%]">
                         <div className="flex flex-row justify-center items-center gap-2 text-tan ">
                             <Image src={logo} alt="waltondesign logo" className="invert h-12 w-12 md:h-20 md:w-20" />
                             <AnimatedText weight={100} className="text-3xl md:text-4xl" text="Walton" />
