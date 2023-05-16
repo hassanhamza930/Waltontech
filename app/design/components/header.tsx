@@ -27,7 +27,7 @@ interface AnimatedText {
 
 
 export function AnimatedText(props: AnimatedText) {
-   
+
     return (
         <div className="flex flex-row justify-center h-12 overflow-y-hidden items-center">
             {
@@ -38,7 +38,7 @@ export function AnimatedText(props: AnimatedText) {
                             initial={{ opacity: 0, y: 40 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1, ease: "easeInOut" }}
-                            style={{fontWeight:300}}
+                            style={{ fontWeight: 300 }}
                             className={props.className}>
                             {letter.toString()}
                         </motion.div>
@@ -127,7 +127,7 @@ function Header(props: HeaderProps) {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="bg-tan md:bg-transparent w-full fixed z-10 flex py-3 pt-10 flex-row justify-between items-center px-5 md:px-[10%]">
+                        className="bg-tan md:bg-transparent w-full fixed z-10 flex py-3 md:pt-10 flex-row justify-between items-center px-5 md:px-[10%]">
                         <div className="flex flex-row justify-center items-center gap-2 ">
                             <Image src={logo} alt="waltondesign logo" className="h-12 w-12 md:h-20 md:w-20" />
                             <AnimatedText weight={100} className="text-3xl md:text-4xl" text="Walton" />
@@ -148,7 +148,7 @@ function Header(props: HeaderProps) {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="bg-black md:bg-transparent w-full fixed z-10 flex py-3 pt-10 flex-row justify-between items-center px-5 md:px-[10%]">
+                        className="bg-black md:bg-transparent w-full fixed z-10 flex py-3 md:pt-10 flex-row justify-between items-center px-5 md:px-[10%]">
                         <div className="flex flex-row justify-center items-center gap-2 text-tan ">
                             <Image src={logo} alt="waltondesign logo" className="invert h-12 w-12 md:h-20 md:w-20" />
                             <AnimatedText weight={100} className="text-3xl md:text-4xl" text="Walton" />

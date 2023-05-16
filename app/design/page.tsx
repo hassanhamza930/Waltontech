@@ -11,6 +11,7 @@ import { useRecoilState } from "recoil";
 import Hero from "./components/hero";
 import Whatwedo from "./components/whatwedo";
 import { Metadata } from "next";
+import About from "./components/about";
 
 const plex = IBM_Plex_Sans({
     subsets: ['latin'],
@@ -40,8 +41,9 @@ function Design() {
 
             <Hero/>
             <Whatwedo/>
+            <About/>
             
-            <div className="h-screen w-full bg-tan"></div>
+            {/* <div className="h-screen w-full bg-tan"></div> */}
             <div className="h-screen w-full bg-black flex justify-center items-center">
                 <div className="h-24 w-24 rounded-md bg-tan"></div>
             </div>

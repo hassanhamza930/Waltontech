@@ -28,7 +28,7 @@ function DropdownInfo(props: DropdownInfoProps) {
             whileInView={"visible"}
             className="flex flex-col justify-start items-start gap-3 w-[80%] md:w-96 mb-6 md:mb-12">
             <button onClick={() => { setdetailsOpen(!detailsOpen) }} className="flex flex-row justify-center items-center gap-5">
-                <div className="text-2xl md:text-4xl">{props.text}</div>
+                <div className="text-2xl md:text-3xl">{props.text}</div>
                 <MdArrowDropDown size={20} className="" />
             </button>
 
