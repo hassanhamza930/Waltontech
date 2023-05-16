@@ -21,6 +21,8 @@ interface HeaderProps {
 
 interface AnimatedText {
     text: string,
+    weight: number,
+    className: string,
 }
 
 
@@ -36,7 +38,8 @@ export function AnimatedText(props: AnimatedText) {
                             initial={{ opacity: 0, y: 40 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1, ease: "easeInOut" }}
-                            className="text-3xl md:text-4xl font-light">
+                            style={{fontWeight:300}}
+                            className={props.className}>
                             {letter.toString()}
                         </motion.div>
                     )
@@ -123,11 +126,11 @@ function Header(props: HeaderProps) {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        transition={{ duration: 0.5 }}
-                        style={{ backgroundColor: "" }} className="w-full fixed z-10 flex pt-10 py-3 flex-row justify-between items-center px-5 md:px-[5%]">
+                        transition={{ duration: 0.3 }}
+                        className="bg-tan md:bg-transparent w-full fixed z-10 flex py-3 pt-10 flex-row justify-between items-center px-5 md:px-[5%]">
                         <div className="flex flex-row justify-center items-center gap-2 ">
                             <Image src={logo} alt="waltondesign logo" className="h-12 w-12 md:h-20 md:w-20" />
-                            <AnimatedText text="Walton" />
+                            <AnimatedText weight={100} className="text-3xl md:text-4xl" text="Walton" />
                         </div>
 
                         <button className="" onClick={() => { props.setSideBarOpen(true) }}>
@@ -145,10 +148,10 @@ function Header(props: HeaderProps) {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        style={{ backgroundColor: "" }} className="w-full fixed z-10 flex pt-10 py-3 flex-row justify-between items-center px-5 md:px-[5%]">
+                        className="bg-black md:bg-transparent w-full fixed z-10 flex py-3 pt-10 flex-row justify-between items-center px-5 md:px-[5%]">
                         <div className="flex flex-row justify-center items-center gap-2 text-tan ">
                             <Image src={logo} alt="waltondesign logo" className="invert h-12 w-12 md:h-20 md:w-20" />
-                            <AnimatedText text="Walton" />
+                            <AnimatedText weight={100} className="text-3xl md:text-4xl" text="Walton" />
                         </div>
 
                         <button className="" onClick={() => { props.setSideBarOpen(true) }}>
