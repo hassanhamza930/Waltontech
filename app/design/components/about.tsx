@@ -29,15 +29,31 @@ function About() {
 
                     <div className="flex flex-col justify-start items-start gap-6 w-full md:w-2/4">
 
-                        <div className="flex flex-row justify-center items-end gap-3">
+                        <motion.div 
+                         initial="hidden"
+                         variants={{
+                             "visible": { opacity: 1, y: 0 },
+                             "hidden": { opacity: 0, y: 30 },
+                         }}
+                         transition={{ duration: 1, delay: 0.3 }}
+                         whileInView={"visible"}
+                        className="flex flex-row justify-center items-end gap-3">
                             <div className="text-6xl font-bold">7</div>
                             <div className="text-xl font-regular">Developers & Designers</div>
-                        </div>
+                        </motion.div>
 
-                        <div className="flex flex-row justify-center items-end gap-3">
+                        <motion.div
+                        initial="hidden"
+                        variants={{
+                            "visible": { opacity: 1, y: 0 },
+                            "hidden": { opacity: 0, y: 50 },
+                        }}
+                        transition={{ duration: 1, delay: 0.5 }}
+                        whileInView={"visible"}
+                        className="flex flex-row justify-center items-end gap-3">
                             <div className="text-6xl font-bold">3</div>
                             <div className="text-xl font-regular">Years in business</div>
-                        </div>
+                        </motion.div>
 
                     </div>
 
