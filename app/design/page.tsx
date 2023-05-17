@@ -14,6 +14,7 @@ import { Metadata } from "next";
 import About from "./components/about";
 import Work from "./components/work";
 import CustomCursor from "./components/cursor";
+import DesignIsCore from "./components/designIsCore";
 
 const plex = IBM_Plex_Sans({
     subsets: ['latin'],
@@ -44,6 +45,7 @@ function Design() {
             <Hero />
             <Whatwedo />
             <About />
+            <DesignIsCore/>
             <Work />
 
             {/* <div className="h-screen w-full bg-tan"></div> */}

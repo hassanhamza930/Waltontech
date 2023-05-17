@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 function About() {
     return (
         <div className="flex justify-center items-center w-full h-full">
-            <div className="flex flex-col md:flex-row justify-center items-center w-[80%] md:gap-0 gap-12 md:w-[60%] h-full bg-tan text-black/90 pt-52 pb-24">
+            <div className="flex flex-col md:flex-row justify-center items-center w-[80%] md:gap-0 gap-12 md:w-[60%] h-full bg-tan text-black/90 py-48">
 
                 <div className="flex justify-start items-center w-full h-full ">
                     <motion.div
