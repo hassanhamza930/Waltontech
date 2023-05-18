@@ -104,7 +104,7 @@ function DesignIsCore() {
                 }}
                 transition={{ duration: 1, delay: 0.3 }}
                 whileInView={"visible"}
-                className="text-md md:text-xl font-regular flex justify-center items-center px-12 py-2 md:py-3 rounded-md hover:scale-[1.02] hover:shadow-xl hover:bg-blue/90 hover:text-tan bg-transparent text-tan border-[1px] hover:border-blue/90 border-tan mt-36 md:mt-64">Let's get started!</motion.button>
+                className="text-md md:text-xl font-regular flex justify-center items-center px-12 py-2 rounded-md hover:scale-[1.02] hover:shadow-xl hover:bg-blue/90 hover:text-tan bg-transparent text-tan border-[1px] hover:border-blue/90 border-tan mt-24 md:mt-36">Let's get started!</motion.button>
 
 
             </div>

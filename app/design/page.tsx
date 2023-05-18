@@ -15,6 +15,7 @@ import About from "./components/about";
 import Work from "./components/work";
 import CustomCursor from "./components/cursor";
 import DesignIsCore from "./components/designIsCore";
+import Whatwvedone from "./components/whatwevedone";
 
 const plex = IBM_Plex_Sans({
     subsets: ['latin'],
@@ -46,7 +47,8 @@ function Design() {
             <Whatwedo />
             <About />
             <DesignIsCore/>
-            <Work />
+            <Whatwvedone />
+    
 
             {/* <div className="h-screen w-full bg-tan"></div> */}
             <div className="h-screen w-full bg-black flex justify-center items-center">
