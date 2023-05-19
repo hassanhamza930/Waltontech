@@ -77,22 +77,46 @@ export function SideMenu(props: HeaderProps) {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3, delay: 0.1 }}
-                    className="hover:scale-105 hover:ml-2 hover:underline transiton-all duration-300 text-2xl ">What we do</motion.button>
+                    className="hover:scale-105 hover:ml-2 hover:underline transiton-all duration-300 text-2xl "
+                    onClick={()=>{
+                        props.setSideBarOpen(false);
+                        var whatwedo=document.getElementById("whatwedo");
+                        whatwedo?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                    >What we do</motion.button>
                 <motion.button
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.3, delay: 0.2 }} className="hover:scale-105 hover:ml-2 hover:underline transiton-all duration-300 text-2xl ">About</motion.button>
+                    transition={{ duration: 0.3, delay: 0.2 }} 
+                    onClick={()=>{
+                        props.setSideBarOpen(false);
+                        var whatwedo=document.getElementById("about");
+                        whatwedo?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                    className="hover:scale-105 hover:ml-2 hover:underline transiton-all duration-300 text-2xl ">About</motion.button>
                 <motion.button
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.3, delay: 0.3 }} className="hover:scale-105 hover:ml-2 hover:underline transiton-all duration-300 text-2xl ">Work</motion.button>
+                    transition={{ duration: 0.3, delay: 0.3 }} 
+                    onClick={()=>{
+                        props.setSideBarOpen(false);
+                        var whatwedo=document.getElementById("work");
+                        whatwedo?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                    className="hover:scale-105 hover:ml-2 hover:underline transiton-all duration-300 text-2xl ">Work</motion.button>
                 <motion.button
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.3, delay: 0.4 }} className="text-left flex flex-col justify-start items-start hover:scale-105 hover:ml-2 hover:underline transiton-all duration-300 ">
+                    transition={{ duration: 0.3, delay: 0.4 }} 
+                    onClick={()=>{
+                        props.setSideBarOpen(false);
+                        var whatwedo=document.getElementById("contact");
+                        whatwedo?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                    className="text-left flex flex-col justify-start items-start hover:scale-105 hover:ml-2 hover:underline transiton-all duration-300 ">
                     <div className="text-2xl">Contact</div>
                     <div className=" ">hamza@waltontech.co</div>
 

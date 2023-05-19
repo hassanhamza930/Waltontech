@@ -86,7 +86,7 @@ function Whatwedo() {
     return (
 
         <div className="flex justify-center items-center w-full h-full bg-black text-tan/80">
-            <div className="flex flex-col md:flex-row justify-center items-start w-[80%] md:gap-0 gap-12 md:w-[60%] h-full py-24 md:py-72">
+            <div id="whatwedo" className="flex flex-col md:flex-row justify-center items-start w-[80%] md:gap-0 gap-12 md:w-[60%] h-full py-24 md:py-72">
 
                 <div className="flex justify-start items-center w-full h-full ">
 
