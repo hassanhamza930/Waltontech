@@ -26,12 +26,12 @@ function Contact() {
 
                         <div className="flex w-full flex-col md:flex-row-reverse justify-start items-start gap-6 mt-4">
 
-                            <div style={{ backgroundImage: `url('${hamza.src}')` }} className=" h-36 md:h-64 w-36 md:w-64 bg-no-repeat bg-left bg-contain mt-3 flex flex-col justify-end items-start p-3 md:p-5">
+                            {/* <div style={{ backgroundImage: `url('${hamza.src}')` }} className=" h-36 md:h-64 w-36 md:w-64 bg-no-repeat bg-left bg-contain mt-3 flex flex-col justify-end items-start p-3 md:p-5">
                                 
                                 <div className="md:flex hidden text-2xl font-regular text-tan/90">Hamza Hassan</div>
                                 <div className="md:flex hidden text-sm md:text-md font-regular text-tan/90">Business Development Lead</div>
 
-                            </div>
+                            </div> */}
 
                             <div className="text-md font-regular text-tan/90 flex-1 flex-col justify-start items-start gap-2">
                                 <div className="text-3xl font-regular text-tan/90">
