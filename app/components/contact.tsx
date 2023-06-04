@@ -1,91 +1,94 @@
-import { AnimatePresence } from "framer-motion";
-import { useState } from "react";
-import hamza from "../../images/hamza.svg";
-import { motion } from "framer-motion";
-import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
-import Button from "@/styles/components/button";
+"use client";
+
+import { useRecoilState } from "recoil";
+import { isBlackBackgroundAtom } from "../atoms";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 function Contact() {
+    const [isBlackBg, setisBlackBg] = useRecoilState(isBlackBackgroundAtom);
+    const { ref, inView, entry } = useInView({
+        threshold: 0.1,
+    });
+    const description = "My name is Hamza. <br/> When you contact me, you'll be met by a real person! not an autoreply bot. As a partner at Waltontech, i'm passionate about understanding your unique business needs and providing expert guidance on how we can go about catering to them. <br/> <br/> I'm excited to hear from you, let's discuss whatever you have in mind on a free consultation call 🙂"
 
-
-    const [showContactInfo, setshowContactInfo] = useState(false);
+    useEffect(() => {
+        if (inView) {
+            setisBlackBg(true);
+        }
+        else {
+            setisBlackBg(false);
+        }
+    }, [inView]);
 
     return (
-        <div id="contact" className=" bg-blue/90 relative z-20 flex flex-col h-full justify-center items-center w-full">
-            <div className="bg-blue bg-contain bg-blend-lighten bg-right-top flex bg-no-repeat flex-col h-full justify-center items-center w-full py-0 md:py-10">
-                <div className="w-full xl:w-[70%] bg-blue/70 md:bg-transparent rounded-sm flex flex-col justify-start items-start p-6 md:p-10 gap-4 mb-36">
+        <div className="flex justify-center items-center h-full w-full bg-black text-tan/90 py-36">
+            <div id="contact" ref={ref} className="h-full w-[80%] md:w-[60%] flex flex-col gap-10 md:gap-14 justify-start items-start">
 
-                    <div className="flex flex-row justify-center items-center gap-4">
-                        <div className="w-12 h-[3px] rounded-full bg-tan/90"></div>
-                        <div className="text-sm font-regular text-tan/90">Talk to us</div>
-                    </div>
-
-                    <div className="flex justify-start items-start flex-col gap-5">
-                        <div className="text-4xl md:text-5xl font-bold text-tan/90">Whatever you are trying to build, We can help you figure things out.</div>
-
-
-                        <div className="flex w-full flex-col md:flex-row-reverse justify-start items-start gap-6 mt-4">
-
-                            {/* <div style={{ backgroundImage: `url('${hamza.src}')` }} className=" h-36 md:h-64 w-36 md:w-64 bg-no-repeat bg-left bg-contain mt-3 flex flex-col justify-end items-start p-3 md:p-5">
-                                
-                                <div className="md:flex hidden text-2xl font-regular text-tan/90">Hamza Hassan</div>
-                                <div className="md:flex hidden text-sm md:text-md font-regular text-tan/90">Business Development Lead</div>
-
-                            </div> */}
-
-                            <div className="text-md font-regular text-tan/90 flex-1 flex-col justify-start items-start gap-2">
-                                <div className="text-3xl font-regular text-tan/90">
-                                    Hello there!
-                                </div>
-                                <div className="mt-4">
-                                    My name is Hamza and I'm excited to hear from you.
-
-                                    As a partner at Waltontech,<br /> I have a passion for technology and a dedication to delivering high-quality solutions.<br /><br />
-
-                                    When you contact me, you'll be met by a real person who is ready to listen to your ideas, answer your questions, and provide expert guidance.<br /><br />
-
-                                    Let's discuss your project and explore how we can work together to bring your vision to life.
-                                </div>
+                <motion.div
+                    initial="hidden"
+                    variants={{
+                        "visible": { opacity: 1, y: 0 },
+                        "hidden": { opacity: 0, y: 40 },
+                    }}
+                    transition={{ duration: 1, delay: 0.3 }}
+                    whileInView={"visible"}
+                    className="text-5xl md:text-7xl font-semibold text-left tracking-tight">Hey there 👋</motion.div>
 
 
-                            </div>
-
-                        </div>
-
-                        <div className="relative w-full flex justify-start items-start">
-                            <AnimatePresence>
-                                {
-                                    showContactInfo == false &&
-                                    <motion.div className="absolute mt-5" exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
-                                        <Button text={"Contact me"} onClick={() => {
-                                            setshowContactInfo(true);
-                                            window.open("mailto:hamza@waltontech.co");
-                                        }} />
+                <motion.div
+                    initial="hidden"
+                    variants={{
+                        "visible": { opacity: 1, y: 0 },
+                        "hidden": { opacity: 0, y: 20 },
+                    }}
+                    transition={{ duration: 0.5, delay: 0.7 }}
+                    whileInView={"visible"}
+                    className="text-md md:text-2xl font-light text-center w-full flex flex-wrap justify-start items-start gap-[4px] md:gap-[5px]">
+                    {
+                        description.split(" ").map((word, index) => {
+                            if (word == "<br/>") {
+                                return (
+                                    <div className="w-full h-[3px] bg-transparent"></div>
+                                )
+                            }
+                            else {
+                                return (
+                                    <motion.div
+                                        initial="hidden"
+                                        variants={{
+                                            "visible": { opacity: 1, y: 0 },
+                                            "hidden": { opacity: 0, y: 20 },
+                                        }}
+                                        transition={{ duration: 0.2, delay: (index + 1) * 0.05 }}
+                                        whileInView={"visible"}
+                                    >
+                                        {word}
                                     </motion.div>
-                                }
+                                )
+                            }
+                        })
+                    }
+                </motion.div>
 
-                            </AnimatePresence>
-                            <AnimatePresence>
-                                {
-                                    showContactInfo == true &&
-                                    <motion.div className=" text-md rounded-sm absolute flex flex-col justify-start items-start gap-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3, delay: 0.2 }}>
-                                        <button onClick={() => {
-                                            window.open("mailto:hamza@waltontech.co");
-                                        }} className="flex flex-row justify-center items-center gap-2">
-                                            <AiOutlineMail className="text-tan/90" />
-                                            <div className="text-md font-regular text-tan/90 -mt-[2px]">hamza@waltontech.co</div>
-                                        </button>
-                                        <button onClick={() => { window.open("tel:+923174631189"); }} className="flex flex-row justify-center items-center gap-2">
-                                            <AiOutlinePhone className="text-tan/90" />
-                                            <div className="text-md font-regular text-tan/90 -mt-[2px]">+923174631189</div>
-                                        </button>
 
-                                    </motion.div>
-                                }
-                            </AnimatePresence>
-                        </div>
-                    </div>
-                </div>
+    
+
+                <motion.button 
+                onClick={()=>{
+                    window.open("mailto:hamza@waltontech.co");
+                }}
+                initial="hidden"
+                variants={{
+                    "visible": { opacity: 1, y: 0 },
+                    "hidden": { opacity: 0, y: 20 },
+                }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                whileInView={"visible"}
+                className="text-md md:text-xl font-regular flex justify-center items-center px-12 py-2 rounded-md hover:scale-[1.02] hover:shadow-xl hover:bg-blue/90 hover:text-tan bg-transparent text-tan border-[1px] hover:border-blue/90 border-tan mt-5 md:mt-10 mb-36">Contact Me</motion.button>
+
+
             </div>
         </div>
     );
