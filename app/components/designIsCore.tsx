@@ -11,7 +11,7 @@ function DesignIsCore() {
     const { ref, inView, entry } = useInView({
         threshold: 0.1,
     });
-    const description = "Customers today expect more than just a functional digital product, they want a memorable and engaging experience that keeps them coming back for more. <br/> <br/> That's where we come in! We understand that businesses today need to stand out from the crowd and we're here to help you do just that.    "
+    const description = "Technology has fundamentally changed how humans live and operate within a short span of 20 years. We believe the transformation is just getting started and there are millions of micro solutions to real world problems ready to be solved by stuff that people like you and us create. We are passionate about listening to your ideas and help you bring it to the market while making life changing money in the process 🤑😀 "
 
     useEffect(() => {
         if (inView) {
@@ -34,7 +34,7 @@ function DesignIsCore() {
                     }}
                     transition={{ duration: 1, delay: 0.3 }}
                     whileInView={"visible"}
-                    className="text-5xl md:text-7xl font-semibold text-center tracking-tight">We believe design is core,<br />Not a layer on top.</motion.div>
+                    className="text-5xl md:text-7xl font-medium text-center tracking-tight">We believe the world can be a better place<br/> with your dream app idea</motion.div>
 
 
                 <motion.div
@@ -45,7 +45,7 @@ function DesignIsCore() {
                     }}
                     transition={{ duration: 0.5, delay: 0.7 }}
                     whileInView={"visible"}
-                    className="text-md md:text-2xl font-light text-center w-full md:w-[50%] flex flex-wrap justify-center items-center gap-[4px] md:gap-[5px]">
+                    className="text-md md:text-xl font-light text-center w-full md:w-[50%] flex flex-wrap justify-center items-center gap-[4px] md:gap-[5px]">
                     {
                         description.split(" ").map((word, index) => {
                             if (word == "<br/>") {
@@ -83,7 +83,7 @@ function DesignIsCore() {
                             }}
                             transition={{ duration: 0.5, delay: 0.3 }}
                             whileInView={"visible"}
-                            className="h-48 md:h-96 w-48 md:w-96 bg-tan rounded-md absolute z-20 -mb-12 md:-mb-24 -ml-36 md:-ml-72 bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1655635949384-f737c5133dfe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80')]"></motion.div>
+                            className="h-48 md:h-96 w-48 md:w-96 bg-tan rounded-md absolute z-20 -mb-12 md:-mb-24 -ml-36 md:-ml-72 bg-cover bg-center bg-[url('https://upload.wikimedia.org/wikipedia/commons/f/fc/Mark_Zuckerberg_-_Facebook_Developer_Garage_Paris_2008_%281%29.jpg')]"></motion.div>
                         <motion.div
                             initial="hidden"
                             variants={{
@@ -92,7 +92,7 @@ function DesignIsCore() {
                             }}
                             transition={{ duration: 0.5, delay: 0.7 }}
                             whileInView={"visible"}
-                            className="h-48 md:h-96 w-48 md:w-96 bg-blue rounded-md absolute z-10 -mb-24 md:-mb-52 -mr-36 md:-mr-72 bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1580610447943-1bfbef5efe07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')]"></motion.div>
+                            className="h-48 md:h-96 w-48 md:w-96 bg-blue rounded-md absolute z-10 -mb-24 md:-mb-52 -mr-36 md:-mr-72 bg-cover bg-center bg-[url('https://media.cnn.com/api/v1/images/stellar/prod/210203131619-restricted-02-jeff-bezos-career-unf.jpg?q=w_2000,h_1382,x_0,y_0,c_fill')]"></motion.div>
                     </div>
                 </div>
 

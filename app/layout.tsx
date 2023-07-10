@@ -42,7 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           <Header sideBarOpen={sideBarOpen} setSideBarOpen={setsideBarOpen} />
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </motion.body>
 
       </RecoilRoot>

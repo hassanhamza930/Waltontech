@@ -6,12 +6,23 @@ import { motion } from "framer-motion";
 function Hero() {
     return (
         <div className="bg-tan flex h-full w-full justify-center items-center">
-            <div className="h-full flex flex-col justify-start w-full items-center pt-96 md:pb-24">
+            <div className="h-full flex flex-col justify-start w-full items-center pt-48 md:pb-24">
+
+
+                <motion.div className="hidden md:flex flex-row justify-between items-end w-[60%] gap-5 pb-48">
+                    <motion.div className="text-7xl font-regular">Walton</motion.div>
+                    <div className="flex flex-col justify-end items-end w-full">
+                        <motion.div className="text-md font-light italic text-right"><span className="font-medium">Meaning:</span> walled town. Walton as a boy's name is of Old English origin,<br/> and the meaning of Walton is "walled town"</motion.div>
+                        <motion.div className="text-md font-light underline"><span className="font-medium">It is also the name of our hometown</span></motion.div>
+                    </div>
+
+                </motion.div>
+
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.3, ease: "easeInOut" }}
-                    className="text-3xl md:text-5xl font-light w-4/5 md:w-[60%]">We are a full stack web design agency <br />in the heart of Pakistan.</motion.div>
+                    className="text-3xl md:text-4xl font-light w-4/5 md:w-[60%]">We are a full stack <span className="underline ">SAAS</span> dev agency<br />in the heart of Pakistan.</motion.div>
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
