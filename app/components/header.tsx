@@ -143,7 +143,7 @@ function Header(props: HeaderProps) {
     const [hidden, setHidden] = useRecoilState(isHidden);
 
     return (
-        hidden==false&&
+        hidden==false?
         <>
             <AnimatePresence>
                 {
@@ -187,7 +187,7 @@ function Header(props: HeaderProps) {
                     </motion.div>
                 }
             </AnimatePresence>
-        </>
+        </>:<></>
     );
 }
 
