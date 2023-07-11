@@ -11,7 +11,7 @@ function Contact() {
     const { ref, inView, entry } = useInView({
         threshold: 0.1,
     });
-    const description = "My name is Hamza. <br/> When you contact me, you'll be met by a real person! not an autoreply bot. As a partner at Waltontech, i'm passionate about understanding your unique business needs and providing expert guidance on how we can go about catering to them. <br/> <br/> I'm excited to hear from you, let's discuss whatever you have in mind on a free consultation call 🙂"
+    const description = "My name is Hamza. <br/> When you contact me, you'll be met by a real person! not an autoreply bot. As a partner at Waltontech, i'm passionate about understanding your unique business proposition and providing expert guidance on how we can take your solution to market. <br/> <br/> I'm excited to hear from you, let's discuss whatever you have in mind on a free consultation call 🙂"
 
     useEffect(() => {
         if (inView) {
