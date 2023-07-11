@@ -73,20 +73,31 @@ function Contact() {
                 </motion.div>
 
 
-    
 
-                <motion.button 
-                onClick={()=>{
-                    window.open("mailto:hamza@waltontech.co");
-                }}
-                initial="hidden"
-                variants={{
-                    "visible": { opacity: 1, y: 0 },
-                    "hidden": { opacity: 0, y: 20 },
-                }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                whileInView={"visible"}
-                className="text-md md:text-xl font-regular flex justify-center items-center px-12 py-2 rounded-md hover:scale-[1.02] hover:shadow-xl hover:bg-blue/90 hover:text-tan bg-transparent text-tan border-[1px] hover:border-blue/90 border-tan mt-5 md:mt-10 mb-36">Contact Me</motion.button>
+
+                <motion.button
+                    onClick={() => {
+                        window.open("mailto:hamza@waltontech.co");
+                    }}
+                    initial="hidden"
+                    variants={{
+                        "visible": { opacity: 1, y: 0 },
+                        "hidden": { opacity: 0, y: 20 },
+                    }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    whileInView={"visible"}
+                    className="text-md md:text-xl font-regular flex justify-center items-center px-12 py-2 rounded-md hover:scale-[1.02] hover:shadow-xl hover:bg-blue/90 hover:text-tan bg-transparent text-tan border-[1px] hover:border-blue/90 border-tan mt-5 md:mt-10">Contact Me</motion.button>
+
+                <motion.div
+                    initial="hidden"
+                    variants={{
+                        "visible": { opacity: 1, y: 0 },
+                        "hidden": { opacity: 0, y: 20 },
+                    }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    whileInView={"visible"}
+                    className="text-xl md:text-2xl font-regular flex justify-center items-center text-tan     mb-36">hamza@waltontech.co</motion.div>
+
 
 
             </div>

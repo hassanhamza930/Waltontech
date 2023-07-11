@@ -28,9 +28,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <link rel="icon" href="/logo.svg" />
       <head>
         <title>Walton</title>
-        <meta name="description" content="A fullstack UI/UX design and development studio." />
-        <meta name="keywords" content="UI/UX Design,Fullstack,Web Development,Agency,Walton."/>
-          <meta name="author" content="John Doe" />
+        <meta name="description" content="A fullstack SAAS Dev agency." />
+        <meta name="keywords" content="UI/UX Design,Fullstack,Web Development,Agency,Walton,SAAS,SaaS,Software Development,Pakistan"/>
+          <meta name="author" content="Hamza Hassan" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <RecoilRoot>

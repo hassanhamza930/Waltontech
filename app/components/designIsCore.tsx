@@ -34,7 +34,7 @@ function DesignIsCore() {
                     }}
                     transition={{ duration: 1, delay: 0.3 }}
                     whileInView={"visible"}
-                    className="text-5xl md:text-7xl font-medium text-center tracking-tight">We believe the world can be a better place<br/> with your dream app idea</motion.div>
+                    className="text-5xl md:text-7xl font-medium text-center tracking-tight">We believe the world can be a <br/>better place with your dream app idea</motion.div>
 
 
                 <motion.div

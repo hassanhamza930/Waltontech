@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import { text } from "stream/consumers";
 import { useRecoilState } from "recoil";
 import { isBlackBackgroundAtom } from "../atoms";
+import { isHidden } from "../design/atoms";
 
 
 interface HeaderProps {
@@ -139,9 +140,10 @@ export function SideMenu(props: HeaderProps) {
 function Header(props: HeaderProps) {
 
     const [isBlackBg, setisBlackBg] = useRecoilState(isBlackBackgroundAtom);
-
+    const [hidden, setHidden] = useRecoilState(isHidden);
 
     return (
+        hidden==false&&
         <>
             <AnimatePresence>
                 {

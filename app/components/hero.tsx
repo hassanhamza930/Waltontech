@@ -1,11 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRecoilState } from "recoil";
+import { isHidden } from "../design/atoms";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 
 function Hero() {
+
+    const [hidden, setHidden] = useRecoilState(isHidden);
+    const { ref, inView, entry } = useInView({
+        threshold: 0.1,
+    });
+
+    useEffect(() => {
+        if (inView) {
+            setHidden(true);
+        }
+        else {
+            setHidden(false);
+        }
+    }, [inView]);
+
+
+
     return (
-        <div className="bg-tan flex h-full w-full justify-center items-center">
+        <div ref={ref} className="bg-tan flex h-full w-full justify-center items-center">
             <div className="h-full flex flex-col justify-start w-full items-center pt-48 md:pb-24">
 
 

@@ -27,7 +27,7 @@ function CompanyCard(props: CompanyCardProps) {
     const [detailsOpen, setdetailsOpen] = useState(false);
 
     return (
-        <motion.div
+        <motion.button
             initial="hidden"
             variants={{
                 "visible": { opacity: 1, y: 0 },
@@ -35,7 +35,8 @@ function CompanyCard(props: CompanyCardProps) {
             }}
             transition={{ duration: 1, delay: 0.2 }}
             whileInView={"visible"}
-            className="relative z-0 h-96 w-full md:w-[45%] bg-tan hover:scale-105 text-black/90 transition-all border-2 border-black/20 duration-300 rounded-xl overflow-hidden shadow-xl">
+            onClick={()=>{props.website?window.open(props.website):null}}
+            className="relative text-start z-0 h-96 w-full md:w-[45%] bg-tan hover:scale-105 text-black/90 transition-all border-2 border-black/20 duration-300 rounded-xl overflow-hidden shadow-xl">
             
             {/* <div className="absolute z-10 w-full h-full object-cover object-center bg-gradient-to-b from-black to-black/0">
             </div> */}
@@ -68,7 +69,7 @@ function CompanyCard(props: CompanyCardProps) {
 
 
 
-        </motion.div>
+        </motion.button>
     )
 }
 
@@ -112,8 +113,8 @@ function Whatwvedone() {
                 <div className="flex flex-wrap w-full h-full justify-start items-start md:mt-16 gap-10">
 
                     <CompanyCard img={cn} website="https://careernetwork.co" title="Careernetwork.co" description="Design & Development of a career focused social media app ." />
-                    <CompanyCard img={wavehr} website="https://wavehr.vercel.app" title="WaveHR" description="Design and Development for a recruitment based SaaS app." />
-                    <CompanyCard img={pan} title="PAN Coin" description="Landing page for a meme coin." />
+                    <CompanyCard img={wavehr} website="https://wavehr.co" title="WaveHR" description="Design and Development for a recruitment based SaaS app." />
+                    <CompanyCard img={pan} website="https://peterpanmoney.vercel.app/" title="PAN Coin" description="Landing page for a meme coin." />
                     <CompanyCard img={transformationlabs} title="TransformationLabs.io" description="Design Revamp for a product management consulting company from Canada." />
 
                 </div>
