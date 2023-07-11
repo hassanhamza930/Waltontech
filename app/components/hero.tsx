@@ -5,6 +5,8 @@ import { useRecoilState } from "recoil";
 import { isHidden } from "../design/atoms";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import logo from "../../images/design/logo.svg";
+import Image from "next/image";
 
 
 function Hero() {
@@ -31,9 +33,12 @@ function Hero() {
 
 
                 <motion.div className="hidden md:flex flex-row justify-between items-end w-[60%] gap-5 pb-48">
-                    <motion.div className="text-7xl font-regular">Walton</motion.div>
+                    <div className="flex flex-row justify-start items-center gap-4">
+                        <Image src={logo} alt="waltondesign logo" className="h-12 w-12 md:h-20 md:w-20" />
+                        <motion.div className="text-6xl font-light">Walton</motion.div>
+                    </div>
                     <div className="flex flex-col justify-end items-end w-full">
-                        <motion.div className="text-md font-light italic text-right"><span className="font-medium">Meaning:</span> walled town. Walton as a boy's name is of Old English origin,<br/> and the meaning of Walton is "walled town"</motion.div>
+                        <motion.div className="text-md font-light italic text-right"><span className="font-medium">Meaning:</span> walled town. Walton as a boy's name is of Old English origin,<br /> and the meaning of Walton is "walled town"</motion.div>
                         <motion.div className="text-md font-light underline"><span className="font-medium">It is also the name of our hometown</span></motion.div>
                     </div>
 
