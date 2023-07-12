@@ -19,7 +19,7 @@ function About() {
                         transition={{ duration: 1, delay: 0.5 }}
                         whileInView={"visible"}
                         className="text-xl md:text-2xl font-regular w-full">
-                        As a full-stack design agency , we work closely with our clients to define, design and develop transformative user experiences across all platforms and brand’s touchpoints.
+                        As a full-stack SAAS dev agency , we work closely with our clients to define, design and develop transformative user experiences across all platforms and customer touchpoints.
                     </motion.div>
                 </div>
 
