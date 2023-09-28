@@ -36,7 +36,7 @@ function CompanyCard(props: CompanyCardProps) {
             transition={{ duration: 1, delay: 0.2 }}
             whileInView={"visible"}
             onClick={()=>{props.website?window.open(props.website):null}}
-            className="relative text-start z-0 h-96 w-full md:w-[45%] bg-tan hover:scale-105 text-black/90 transition-all border-2 border-black/20 duration-300 rounded-xl overflow-hidden shadow-xl">
+            className="relative text-start z-0 h-96 w-full md:w-[45%] bg-tan hover:scale-105 text-black/90 transition-all border-[1px] border-blue duration-300 rounded-xl overflow-hidden shadow-xl">
             
             {/* <div className="absolute z-10 w-full h-full object-cover object-center bg-gradient-to-b from-black to-black/0">
             </div> */}
@@ -81,7 +81,7 @@ function Whatwvedone() {
     return (
 
         <div className="flex justify-center items-center w-full h-full bg-tan text-black/90">
-            <div id="work" className="flex flex-col justify-start items-center w-[80%] md:gap-0 gap-12 md:w-[60%] h-full py-24 md:py-72">
+            <div id="work" className="flex flex-col justify-start items-center w-[80%] md:gap-0 gap-12 md:w-[60%] h-full py-24 md:py-36">
 
                 <div className="flex justify-start items-center w-full h-full ">
 
@@ -94,7 +94,7 @@ function Whatwvedone() {
                             }}
                             transition={{ duration: 1, delay: 0.3 }}
                             whileInView={"visible"}
-                            className="text-5xl md:text-6xl font-medium text-center">What We've done.</motion.div>
+                            className="text-5xl md:text-6xl font-bold text-center">What We've done.</motion.div>
                         <motion.div
                             initial="hidden"
                             variants={{
@@ -114,8 +114,8 @@ function Whatwvedone() {
 
                     <CompanyCard img={cn} website="https://careernetwork.co" title="Careernetwork.co" description="Design & Development of a career focused social media app ." />
                     <CompanyCard img={wavehr} website="https://wavehr.co" title="WaveHR" description="Design and Development for a recruitment based SaaS app." />
-                    <CompanyCard img={pan} website="https://peterpanmoney.vercel.app/" title="PAN Coin" description="Landing page for a meme coin." />
-                    <CompanyCard img={transformationlabs} title="TransformationLabs.io" description="Design Revamp for a product management consulting company from Canada." />
+                    {/* <CompanyCard img={pan} website="https://peterpanmoney.vercel.app/" title="PAN Coin" description="Landing page for a meme coin." /> */}
+                    {/* <CompanyCard img={transformationlabs} title="TransformationLabs.io" description="Design Revamp for a product management consulting company from Canada." /> */}
 
                 </div>
 

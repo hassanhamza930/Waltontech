@@ -34,7 +34,7 @@ function Contact() {
                     }}
                     transition={{ duration: 1, delay: 0.3 }}
                     whileInView={"visible"}
-                    className="text-5xl md:text-7xl font-semibold text-left tracking-tight">Hey there 👋</motion.div>
+                    className="text-5xl md:text-6xl font-semibold text-left tracking-tight">Hey there 👋</motion.div>
 
 
                 <motion.div
@@ -77,7 +77,7 @@ function Contact() {
 
                 <motion.button
                     onClick={() => {
-                        window.open("mailto:hamza@waltontech.co");
+                        window.open("mailto:hassanhamza930@gmail.com");
                     }}
                     initial="hidden"
                     variants={{
@@ -96,7 +96,7 @@ function Contact() {
                     }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                     whileInView={"visible"}
-                    className="text-xl md:text-2xl font-regular flex justify-center items-center text-tan     mb-36">hamza@waltontech.co</motion.div>
+                    className="text-xl md:text-2xl font-regular flex justify-center items-center text-tan     mb-36">hassanhamza930@gmail.com</motion.div>
 
 
 
